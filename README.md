@@ -63,4 +63,4 @@
 
 ## 🚀 배포 링크
 
-👉 **https://4rchive7.github.io/cmp_wedding_band/**
+👉 **https://8allang.github.io/ringpick-kr-jp/**
