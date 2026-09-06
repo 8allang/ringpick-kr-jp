@@ -1,0 +1,158 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  
+    <defs>
+      <linearGradient id="metalGrad_bvlgari-serpenti-dia" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#FEF08A" />
+        <stop offset="30%" stop-color="#EAB308" />
+        <stop offset="70%" stop-color="#CA8A04" />
+        <stop offset="100%" stop-color="#854D0E" />
+      </linearGradient>
+
+      <linearGradient id="innerGrad_bvlgari-serpenti-dia" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#CA8A04" />
+        <stop offset="50%" stop-color="#854D0E" />
+        <stop offset="100%" stop-color="#CA8A04" />
+      </linearGradient>
+
+      <radialGradient id="bgGrad_bvlgari-serpenti-dia" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#1E293B" />
+        <stop offset="100%" stop-color="#0F172A" />
+      </radialGradient>
+
+      <filter id="glow_bvlgari-serpenti-dia" x="-20%" y="-20%" width="140%" height="140%">
+        <feGaussianBlur stdDeviation="6" result="blur" />
+        <feComposite in="SourceGraphic" in2="blur" operator="over" />
+      </filter>
+
+      <filter id="sparkle_bvlgari-serpenti-dia" x="-30%" y="-30%" width="160%" height="160%">
+        <feGaussianBlur stdDeviation="3" result="blur" />
+        <feMerge>
+          <feMergeNode in="blur" />
+          <feMergeNode in="SourceGraphic" />
+        </feMerge>
+      </filter>
+    </defs>
+    
+
+  <!-- Dark Luxury Background -->
+  <rect width="400" height="400" fill="url(#bgGrad_bvlgari-serpenti-dia)" rx="24" />
+
+  <!-- Subtle Glow Aura behind ring -->
+  <ellipse cx="200" cy="205" rx="130" ry="70" fill="rgba(234, 179, 8, 0.4)" filter="url(#glow_bvlgari-serpenti-dia)" opacity="0.6" />
+
+  <!-- Brand Signature Header -->
+  <text x="200" y="44" font-family="'Cinzel', 'Georgia', serif" font-size="14" font-weight="700" fill="#FEF08A" letter-spacing="3" text-anchor="middle" opacity="0.9">BVLGARI</text>
+  <line x1="160" y1="54" x2="240" y2="54" stroke="#EAB308" stroke-width="1" opacity="0.4" />
+
+  <!-- MAIN RING 3D STRUCTURE -->
+  <g id="ring_body">
+    <!-- Outer Ring Base Shadow & Body -->
+    <path d="M 90,190 A 110,55 0 0,0 310,190 L 310,210 A 110,55 0 0,1 90,210 Z" fill="#854D0E" />
+
+    <!-- Main Outer Band Wall -->
+    <path d="M 90,188 A 110,55 0 0,0 310,188 L 310,208 A 110,55 0 0,1 90,208 Z" fill="url(#metalGrad_bvlgari-serpenti-dia)" />
+
+    <!-- Inner Ring Hole / Depth Wall -->
+    <ellipse cx="200" cy="188" rx="86" ry="42" fill="url(#innerGrad_bvlgari-serpenti-dia)" stroke="#CA8A04" stroke-width="1.5" />
+    
+    <!-- Top Edge Rim Highlight -->
+    <ellipse cx="200" cy="188" rx="110" ry="55" fill="none" stroke="#FEF08A" stroke-width="2.5" opacity="0.85" />
+    <ellipse cx="200" cy="208" rx="110" ry="55" fill="none" stroke="#854D0E" stroke-width="1.5" opacity="0.6" />
+    
+    <!-- Brand Patterns -->
+    <polygon points="300.0,194.0 307.0,187.0 314.0,194.0 307.0,201.0" fill="none" stroke="#FEF08A" stroke-width="1.4" /><polygon points="289.4152412814638,215.68295422937723 296.4152412814638,208.68295422937723 303.4152412814638,215.68295422937723 296.4152412814638,222.68295422937723" fill="none" stroke="#FEF08A" stroke-width="1.4" /><polygon points="259.75511684790433,233.07602362094093 266.75511684790433,226.07602362094093 273.75511684790433,233.07602362094093 266.75511684790433,240.07602362094093" fill="none" stroke="#FEF08A" stroke-width="1.4" /><polygon points="216.8877624131718,242.73805970956107 223.8877624131718,235.73805970956107 230.8877624131718,242.73805970956107 223.8877624131718,249.73805970956107" fill="none" stroke="#FEF08A" stroke-width="1.4" /><polygon points="169.294310754717,242.75746771527815 176.294310754717,235.75746771527815 183.294310754717,242.75746771527815 176.294310754717,249.75746771527815" fill="none" stroke="#FEF08A" stroke-width="1.4" /><polygon points="126.3909338797747,233.13040784262068 133.3909338797747,226.13040784262068 140.3909338797747,233.13040784262068 133.3909338797747,240.13040784262068" fill="none" stroke="#FEF08A" stroke-width="1.4" /><polygon points="96.6658914599653,215.76155496861637 103.6658914599653,208.76155496861637 110.6658914599653,215.76155496861637 103.6658914599653,222.76155496861637" fill="none" stroke="#FEF08A" stroke-width="1.4" /><polygon points="86.00016297027821,194.08726641829492 93.00016297027821,187.08726641829492 100.00016297027821,194.08726641829492 93.00016297027821,201.08726641829492" fill="none" stroke="#FEF08A" stroke-width="1.4" /><polygon points="96.50391967465282,172.3957125599009 103.50391967465282,165.3957125599009 110.50391967465282,172.3957125599009 103.50391967465282,179.3957125599009" fill="none" stroke="#FEF08A" stroke-width="1.4" /><polygon points="126.0990357720795,154.97847963308354 133.0990357720795,147.97847963308354 140.0990357720795,154.97847963308354 133.0990357720795,161.97847963308354" fill="none" stroke="#FEF08A" stroke-width="1.4" /><polygon points="168.9302371852064,145.28149676073824 175.9302371852064,138.28149676073824 182.9302371852064,145.28149676073824 175.9302371852064,152.28149676073824" fill="none" stroke="#FEF08A" stroke-width="1.4" /><polygon points="216.52354386575354,145.22327280270716 223.52354386575354,138.22327280270716 230.52354386575354,145.22327280270716 223.52354386575354,152.22327280270716" fill="none" stroke="#FEF08A" stroke-width="1.4" /><polygon points="259.4628124897792,154.81532713370802 266.4628124897792,147.81532713370802 273.4628124897792,154.81532713370802 266.4628124897792,161.81532713370802" fill="none" stroke="#FEF08A" stroke-width="1.4" /><polygon points="289.2526823482043,172.15991058161487 296.2526823482043,165.15991058161487 303.2526823482043,172.15991058161487 296.2526823482043,179.15991058161487" fill="none" stroke="#FEF08A" stroke-width="1.4" />
+
+    <!-- Diamonds -->
+    
+            <g transform="translate(305.4, 204.7)">
+              <circle cx="0" cy="0" r="3.5" fill="#FFFFFF" />
+              <circle cx="0" cy="0" r="2.5" fill="#E2E8F0" />
+              <path d="M-4,0 L4,0 M0,-4 L0,4" stroke="#FFFFFF" stroke-width="0.8" />
+            </g>
+            
+            <g transform="translate(299.2, 214.7)">
+              <circle cx="0" cy="0" r="3.5" fill="#FFFFFF" />
+              <circle cx="0" cy="0" r="2.5" fill="#E2E8F0" />
+              <path d="M-4,0 L4,0 M0,-4 L0,4" stroke="#FFFFFF" stroke-width="0.8" />
+            </g>
+            
+            <g transform="translate(288.7, 224.0)">
+              <circle cx="0" cy="0" r="3.5" fill="#FFFFFF" />
+              <circle cx="0" cy="0" r="2.5" fill="#E2E8F0" />
+              <path d="M-4,0 L4,0 M0,-4 L0,4" stroke="#FFFFFF" stroke-width="0.8" />
+            </g>
+            
+            <g transform="translate(274.3, 232.0)">
+              <circle cx="0" cy="0" r="3.5" fill="#FFFFFF" />
+              <circle cx="0" cy="0" r="2.5" fill="#E2E8F0" />
+              <path d="M-4,0 L4,0 M0,-4 L0,4" stroke="#FFFFFF" stroke-width="0.8" />
+            </g>
+            
+            <g transform="translate(256.7, 238.4)">
+              <circle cx="0" cy="0" r="3.5" fill="#FFFFFF" />
+              <circle cx="0" cy="0" r="2.5" fill="#E2E8F0" />
+              <path d="M-4,0 L4,0 M0,-4 L0,4" stroke="#FFFFFF" stroke-width="0.8" />
+            </g>
+            
+            <g transform="translate(236.6, 243.0)">
+              <circle cx="0" cy="0" r="3.5" fill="#FFFFFF" />
+              <circle cx="0" cy="0" r="2.5" fill="#E2E8F0" />
+              <path d="M-4,0 L4,0 M0,-4 L0,4" stroke="#FFFFFF" stroke-width="0.8" />
+            </g>
+            
+            <g transform="translate(214.9, 245.5)">
+              <circle cx="0" cy="0" r="3.5" fill="#FFFFFF" />
+              <circle cx="0" cy="0" r="2.5" fill="#E2E8F0" />
+              <path d="M-4,0 L4,0 M0,-4 L0,4" stroke="#FFFFFF" stroke-width="0.8" />
+            </g>
+            
+            <g transform="translate(192.5, 245.9)">
+              <circle cx="0" cy="0" r="3.5" fill="#FFFFFF" />
+              <circle cx="0" cy="0" r="2.5" fill="#E2E8F0" />
+              <path d="M-4,0 L4,0 M0,-4 L0,4" stroke="#FFFFFF" stroke-width="0.8" />
+            </g>
+            
+            <g transform="translate(170.5, 244.1)">
+              <circle cx="0" cy="0" r="3.5" fill="#FFFFFF" />
+              <circle cx="0" cy="0" r="2.5" fill="#E2E8F0" />
+              <path d="M-4,0 L4,0 M0,-4 L0,4" stroke="#FFFFFF" stroke-width="0.8" />
+            </g>
+            
+            <g transform="translate(149.8, 240.1)">
+              <circle cx="0" cy="0" r="3.5" fill="#FFFFFF" />
+              <circle cx="0" cy="0" r="2.5" fill="#E2E8F0" />
+              <path d="M-4,0 L4,0 M0,-4 L0,4" stroke="#FFFFFF" stroke-width="0.8" />
+            </g>
+            
+            <g transform="translate(131.2, 234.3)">
+              <circle cx="0" cy="0" r="3.5" fill="#FFFFFF" />
+              <circle cx="0" cy="0" r="2.5" fill="#E2E8F0" />
+              <path d="M-4,0 L4,0 M0,-4 L0,4" stroke="#FFFFFF" stroke-width="0.8" />
+            </g>
+            
+            <g transform="translate(115.7, 226.8)">
+              <circle cx="0" cy="0" r="3.5" fill="#FFFFFF" />
+              <circle cx="0" cy="0" r="2.5" fill="#E2E8F0" />
+              <path d="M-4,0 L4,0 M0,-4 L0,4" stroke="#FFFFFF" stroke-width="0.8" />
+            </g>
+            
+            <g transform="translate(103.8, 217.9)">
+              <circle cx="0" cy="0" r="3.5" fill="#FFFFFF" />
+              <circle cx="0" cy="0" r="2.5" fill="#E2E8F0" />
+              <path d="M-4,0 L4,0 M0,-4 L0,4" stroke="#FFFFFF" stroke-width="0.8" />
+            </g>
+            
+            <g transform="translate(96.2, 208.1)">
+              <circle cx="0" cy="0" r="3.5" fill="#FFFFFF" />
+              <circle cx="0" cy="0" r="2.5" fill="#E2E8F0" />
+              <path d="M-4,0 L4,0 M0,-4 L0,4" stroke="#FFFFFF" stroke-width="0.8" />
+            </g>
+            
+  </g>
+
+  <!-- Model Name Footer Pill -->
+  <g transform="translate(200, 355)">
+    <rect x="-140" y="-16" width="280" height="32" rx="16" fill="rgba(15, 23, 42, 0.75)" stroke="#EAB308" stroke-width="1" />
+    <text x="0" y="5" font-family="'Pretendard', sans-serif" font-size="12" font-weight="600" fill="#F8FAFC" text-anchor="middle">세르펜티 바이퍼 링 (세미파베 다이아)</text>
+  </g>
+</svg>

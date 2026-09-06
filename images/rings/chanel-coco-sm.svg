@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  
+    <defs>
+      <linearGradient id="metalGrad_chanel-coco-sm" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#FEF08A" />
+        <stop offset="30%" stop-color="#EAB308" />
+        <stop offset="70%" stop-color="#CA8A04" />
+        <stop offset="100%" stop-color="#854D0E" />
+      </linearGradient>
+
+      <linearGradient id="innerGrad_chanel-coco-sm" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#CA8A04" />
+        <stop offset="50%" stop-color="#854D0E" />
+        <stop offset="100%" stop-color="#CA8A04" />
+      </linearGradient>
+
+      <radialGradient id="bgGrad_chanel-coco-sm" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#1E293B" />
+        <stop offset="100%" stop-color="#0F172A" />
+      </radialGradient>
+
+      <filter id="glow_chanel-coco-sm" x="-20%" y="-20%" width="140%" height="140%">
+        <feGaussianBlur stdDeviation="6" result="blur" />
+        <feComposite in="SourceGraphic" in2="blur" operator="over" />
+      </filter>
+
+      <filter id="sparkle_chanel-coco-sm" x="-30%" y="-30%" width="160%" height="160%">
+        <feGaussianBlur stdDeviation="3" result="blur" />
+        <feMerge>
+          <feMergeNode in="blur" />
+          <feMergeNode in="SourceGraphic" />
+        </feMerge>
+      </filter>
+    </defs>
+    
+
+  <!-- Dark Luxury Background -->
+  <rect width="400" height="400" fill="url(#bgGrad_chanel-coco-sm)" rx="24" />
+
+  <!-- Subtle Glow Aura behind ring -->
+  <ellipse cx="200" cy="205" rx="130" ry="70" fill="rgba(234, 179, 8, 0.4)" filter="url(#glow_chanel-coco-sm)" opacity="0.6" />
+
+  <!-- Brand Signature Header -->
+  <text x="200" y="44" font-family="'Cinzel', 'Georgia', serif" font-size="14" font-weight="700" fill="#FEF08A" letter-spacing="3" text-anchor="middle" opacity="0.9">CHANEL</text>
+  <line x1="160" y1="54" x2="240" y2="54" stroke="#EAB308" stroke-width="1" opacity="0.4" />
+
+  <!-- MAIN RING 3D STRUCTURE -->
+  <g id="ring_body">
+    <!-- Outer Ring Base Shadow & Body -->
+    <path d="M 90,190 A 110,55 0 0,0 310,190 L 310,210 A 110,55 0 0,1 90,210 Z" fill="#854D0E" />
+
+    <!-- Main Outer Band Wall -->
+    <path d="M 90,188 A 110,55 0 0,0 310,188 L 310,208 A 110,55 0 0,1 90,208 Z" fill="url(#metalGrad_chanel-coco-sm)" />
+
+    <!-- Inner Ring Hole / Depth Wall -->
+    <ellipse cx="200" cy="188" rx="86" ry="42" fill="url(#innerGrad_chanel-coco-sm)" stroke="#CA8A04" stroke-width="1.5" />
+    
+    <!-- Top Edge Rim Highlight -->
+    <ellipse cx="200" cy="188" rx="110" ry="55" fill="none" stroke="#FEF08A" stroke-width="2.5" opacity="0.85" />
+    <ellipse cx="200" cy="208" rx="110" ry="55" fill="none" stroke="#854D0E" stroke-width="1.5" opacity="0.6" />
+    
+    <!-- Brand Patterns -->
+    <line x1="308.0" y1="188.0" x2="303.2" y2="219.4" stroke="#854D0E" stroke-width="1.5" opacity="0.7" /><line x1="299.8" y1="207.9" x2="283.1" y2="237.2" stroke="#854D0E" stroke-width="1.5" opacity="0.7" /><line x1="276.4" y1="224.8" x2="250.4" y2="250.0" stroke="#854D0E" stroke-width="1.5" opacity="0.7" /><line x1="241.3" y1="236.0" x2="210.0" y2="255.8" stroke="#854D0E" stroke-width="1.5" opacity="0.7" /><line x1="200.0" y1="240.0" x2="168.1" y2="253.7" stroke="#854D0E" stroke-width="1.5" opacity="0.7" /><line x1="158.7" y1="236.0" x2="131.0" y2="244.0" stroke="#854D0E" stroke-width="1.5" opacity="0.7" /><line x1="123.6" y1="224.8" x2="104.5" y2="228.3" stroke="#854D0E" stroke-width="1.5" opacity="0.7" /><line x1="100.2" y1="207.9" x2="92.5" y2="208.8" stroke="#854D0E" stroke-width="1.5" opacity="0.7" /><line x1="92.0" y1="188.0" x2="96.8" y2="188.6" stroke="#854D0E" stroke-width="1.5" opacity="0.7" /><line x1="100.2" y1="168.1" x2="116.9" y2="170.8" stroke="#854D0E" stroke-width="1.5" opacity="0.7" /><line x1="123.6" y1="151.2" x2="149.6" y2="158.0" stroke="#854D0E" stroke-width="1.5" opacity="0.7" /><line x1="158.7" y1="140.0" x2="190.0" y2="152.2" stroke="#854D0E" stroke-width="1.5" opacity="0.7" /><line x1="200.0" y1="136.0" x2="231.9" y2="154.3" stroke="#854D0E" stroke-width="1.5" opacity="0.7" /><line x1="241.3" y1="140.0" x2="269.0" y2="164.0" stroke="#854D0E" stroke-width="1.5" opacity="0.7" /><line x1="276.4" y1="151.2" x2="295.5" y2="179.7" stroke="#854D0E" stroke-width="1.5" opacity="0.7" /><line x1="299.8" y1="168.1" x2="307.5" y2="199.2" stroke="#854D0E" stroke-width="1.5" opacity="0.7" />
+
+    <!-- Diamonds -->
+    
+        <g transform="translate(200, 245)" filter="url(#sparkle_chanel-coco-sm)">
+          <polygon points="0,-12 4,-4 12,0 4,4 0,12 -4,4 -12,0 -4,-4" fill="#FFFFFF" />
+          <circle cx="0" cy="0" r="5.5" fill="#FFFFFF" />
+          <circle cx="0" cy="0" r="3.2" fill="#E0F2FE" />
+        </g>
+        
+  </g>
+
+  <!-- Model Name Footer Pill -->
+  <g transform="translate(200, 355)">
+    <rect x="-140" y="-16" width="280" height="32" rx="16" fill="rgba(15, 23, 42, 0.75)" stroke="#EAB308" stroke-width="1" />
+    <text x="0" y="5" font-family="'Pretendard', sans-serif" font-size="12" font-weight="600" fill="#F8FAFC" text-anchor="middle">코코 크러쉬 링 (스몰 노다이아)</text>
+  </g>
+</svg>

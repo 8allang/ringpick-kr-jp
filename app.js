@@ -15,7 +15,7 @@ let PRESETS = [
     "krPrice": 2190000,
     "guestCardAllowed": false,
     "tag": "게스트카드 5% 불가",
-    "imageUrl": "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dwc27b40c7/images/large/5c4da398fe195e5fa36ea2b5d4ce0071.png",
+    "imageUrl": "./images/rings/cartier-love-sm.svg",
     "krUrl": "https://www.cartier.com/ko-kr/주얼리/컬렉션/웨딩-밴드/",
     "jpUrl": "https://www.cartier.com/ja-jp/ジュエリー/カテゴリー/結婚指輪"
   },
@@ -28,7 +28,7 @@ let PRESETS = [
     "krPrice": 3330000,
     "guestCardAllowed": false,
     "tag": "게스트카드 5% 불가",
-    "imageUrl": "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw47516a74/images/large/509efad81d12569981abebf66c433720.png",
+    "imageUrl": "./images/rings/cartier-love-cl.svg",
     "krUrl": "https://www.cartier.com/ko-kr/주얼리/컬렉션/웨딩-밴드/",
     "jpUrl": "https://www.cartier.com/ja-jp/ジュエリー/カテゴリー/結婚指輪"
   },
@@ -41,7 +41,7 @@ let PRESETS = [
     "krPrice": 4060000,
     "guestCardAllowed": false,
     "tag": "게스트카드 5% 불가",
-    "imageUrl": "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw1b4e2373/images/large/262529949d2c554b9f36f6426462feef.png",
+    "imageUrl": "./images/rings/cartier-love-1d.svg",
     "krUrl": "https://www.cartier.com/ko-kr/주얼리/컬렉션/웨딩-밴드/",
     "jpUrl": "https://www.cartier.com/ja-jp/ジュエリー/カテゴリー/結婚指輪"
   },
@@ -54,7 +54,7 @@ let PRESETS = [
     "krPrice": 2620000,
     "guestCardAllowed": false,
     "tag": "게스트카드 5% 불가",
-    "imageUrl": "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dwae3ae765/images/large/bdddbc7c263e54ea9f1f71501fb9eede.png",
+    "imageUrl": "./images/rings/cartier-trinity-cl.svg",
     "krUrl": "https://www.cartier.com/ko-kr/주얼리/컬렉션/웨딩-밴드/",
     "jpUrl": "https://www.cartier.com/ja-jp/ジュエリー/カテゴリー/結婚指輪"
   },
@@ -67,7 +67,7 @@ let PRESETS = [
     "krPrice": 2560000,
     "guestCardAllowed": false,
     "tag": "게스트카드 5% 불가",
-    "imageUrl": "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw1bc21509/images/large/13c8ff759ea45a0592ca07bfa7c5d0eb.png",
+    "imageUrl": "./images/rings/cartier-vendome-35.svg",
     "krUrl": "https://www.cartier.com/ko-kr/주얼리/컬렉션/웨딩-밴드/",
     "jpUrl": "https://www.cartier.com/ja-jp/ジュエリー/カテゴリー/結婚指輪"
   },
@@ -80,7 +80,7 @@ let PRESETS = [
     "krPrice": 7750000,
     "guestCardAllowed": false,
     "tag": "게스트카드 5% 불가",
-    "imageUrl": "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw953ebfd8/images/large/92ea012019465b75a1d7f1d43a1a5ca6.png",
+    "imageUrl": "./images/rings/cartier-vendome-pave.svg",
     "krUrl": "https://www.cartier.com/ko-kr/주얼리/컬렉션/웨딩-밴드/",
     "jpUrl": "https://www.cartier.com/ja-jp/ジュエリー/カテゴリー/結婚指輪"
   },
@@ -93,7 +93,7 @@ let PRESETS = [
     "krPrice": 2980000,
     "guestCardAllowed": true,
     "tag": "지점별 5% 가능",
-    "imageUrl": "https://media.tiffany.com/is/image/Tiffany/EcomItemL2/tiffany-classic-milgrain-wedding-band-ring-12002161_989758_ED_M.jpg",
+    "imageUrl": "./images/rings/tiffany-milgrain-4mm.svg",
     "krUrl": "https://www.tiffany.kr/wedding/wedding-rings/",
     "jpUrl": "https://www.tiffany.co.jp/wedding/wedding-rings/"
   },
@@ -106,7 +106,7 @@ let PRESETS = [
     "krPrice": 4030000,
     "guestCardAllowed": true,
     "tag": "지점별 5% 가능",
-    "imageUrl": "https://media.tiffany.com/is/image/Tiffany/EcomItemL2/tiffany-together-milgrain-band-ring-69683935_1033282_ED.jpg",
+    "imageUrl": "./images/rings/tiffany-together-1d-4mm.svg",
     "krUrl": "https://www.tiffany.kr/wedding/wedding-rings/",
     "jpUrl": "https://www.tiffany.co.jp/wedding/wedding-rings/"
   },
@@ -119,7 +119,7 @@ let PRESETS = [
     "krPrice": 1850000,
     "guestCardAllowed": true,
     "tag": "지점별 5% 가능",
-    "imageUrl": "https://media.tiffany.com/is/image/Tiffany/EcomItemL2/tiffany-harmony-wedding-band-ring-31298418_989758_ED_M.jpg",
+    "imageUrl": "./images/rings/tiffany-harmony-pt-3mm.svg",
     "krUrl": "https://www.tiffany.kr/wedding/wedding-rings/",
     "jpUrl": "https://www.tiffany.co.jp/wedding/wedding-rings/"
   },
@@ -132,7 +132,7 @@ let PRESETS = [
     "krPrice": 1590000,
     "guestCardAllowed": true,
     "tag": "지점별 5% 가능",
-    "imageUrl": "https://media.tiffany.com/is/image/Tiffany/EcomItemL2/tiffany-harmony-wedding-band-ring-31298418_989758_ED_M.jpg",
+    "imageUrl": "./images/rings/tiffany-harmony-rg-3mm.svg",
     "krUrl": "https://www.tiffany.kr/wedding/wedding-rings/",
     "jpUrl": "https://www.tiffany.co.jp/wedding/wedding-rings/"
   },
@@ -145,7 +145,7 @@ let PRESETS = [
     "krPrice": 3980000,
     "guestCardAllowed": true,
     "tag": "지점별 5% 가능",
-    "imageUrl": "https://media.tiffany.com/is/image/Tiffany/EcomItemL2/tiffany-harmony-band-ring-31298450_989758_ED_M.jpg",
+    "imageUrl": "./images/rings/tiffany-harmony-dia.svg",
     "krUrl": "https://www.tiffany.kr/wedding/wedding-rings/",
     "jpUrl": "https://www.tiffany.co.jp/wedding/wedding-rings/"
   },
@@ -158,7 +158,7 @@ let PRESETS = [
     "krPrice": 2270000,
     "guestCardAllowed": true,
     "tag": "지점별 5% 가능",
-    "imageUrl": "https://media.tiffany.com/is/image/Tiffany/EcomItemL2/tiffany-t-narrow-ring-33823304_996162_ED.jpg",
+    "imageUrl": "./images/rings/tiffany-t-narrow-rg.svg",
     "krUrl": "https://www.tiffany.kr/wedding/wedding-rings/",
     "jpUrl": "https://www.tiffany.co.jp/wedding/wedding-rings/"
   },
@@ -171,7 +171,7 @@ let PRESETS = [
     "krPrice": 2850000,
     "guestCardAllowed": true,
     "tag": "지점별 5% 가능",
-    "imageUrl": "https://media.tiffany.com/is/image/Tiffany/EcomItemL2/tiffany-classic-wedding-band-ring-63064947_989758_ED_M.jpg",
+    "imageUrl": "./images/rings/tiffany-band-3dia.svg",
     "krUrl": "https://www.tiffany.kr/wedding/wedding-rings/",
     "jpUrl": "https://www.tiffany.co.jp/wedding/wedding-rings/"
   },
@@ -184,7 +184,7 @@ let PRESETS = [
     "krPrice": 2650000,
     "guestCardAllowed": true,
     "tag": "백화점 5% 가능",
-    "imageUrl": "https://www.chaumet.com/media/catalog/product/0/8/082725_1.png",
+    "imageUrl": "./images/rings/chaumet-torsade-pg.svg",
     "krUrl": "https://www.chaumet.com/kor_ko/bridal/wedding-bands",
     "jpUrl": "https://www.chaumet.com/jpn_ja/bridal/wedding-bands"
   },
@@ -197,7 +197,7 @@ let PRESETS = [
     "krPrice": 3100000,
     "guestCardAllowed": true,
     "tag": "백화점 5% 가능",
-    "imageUrl": "https://www.chaumet.com/media/catalog/product/0/8/082723_1.png",
+    "imageUrl": "./images/rings/chaumet-torsade-pt.svg",
     "krUrl": "https://www.chaumet.com/kor_ko/bridal/wedding-bands",
     "jpUrl": "https://www.chaumet.com/jpn_ja/bridal/wedding-bands"
   },
@@ -210,7 +210,7 @@ let PRESETS = [
     "krPrice": 3550000,
     "guestCardAllowed": true,
     "tag": "백화점 5% 가능",
-    "imageUrl": "https://www.chaumet.com/media/catalog/product/0/8/082724_1.png",
+    "imageUrl": "./images/rings/chaumet-torsade-1d.svg",
     "krUrl": "https://www.chaumet.com/kor_ko/bridal/wedding-bands",
     "jpUrl": "https://www.chaumet.com/jpn_ja/bridal/wedding-bands"
   },
@@ -223,7 +223,7 @@ let PRESETS = [
     "krPrice": 7420000,
     "guestCardAllowed": true,
     "tag": "백화점 5% 가능",
-    "imageUrl": "https://www.chaumet.com/media/catalog/product/0/8/082727_1.png",
+    "imageUrl": "./images/rings/chaumet-torsade-pave.svg",
     "krUrl": "https://www.chaumet.com/kor_ko/bridal/wedding-bands",
     "jpUrl": "https://www.chaumet.com/jpn_ja/bridal/wedding-bands"
   },
@@ -236,7 +236,7 @@ let PRESETS = [
     "krPrice": 2880000,
     "guestCardAllowed": true,
     "tag": "백화점 5% 가능",
-    "imageUrl": "https://www.chaumet.com/media/catalog/product/0/8/082218_1.png",
+    "imageUrl": "./images/rings/chaumet-liens.svg",
     "krUrl": "https://www.chaumet.com/kor_ko/bridal/wedding-bands",
     "jpUrl": "https://www.chaumet.com/jpn_ja/bridal/wedding-bands"
   },
@@ -249,7 +249,7 @@ let PRESETS = [
     "krPrice": 3740000,
     "guestCardAllowed": true,
     "tag": "백화점 5% 가능",
-    "imageUrl": "https://www.chaumet.com/media/catalog/product/0/8/082219_1.png",
+    "imageUrl": "./images/rings/chaumet-liens-dia.svg",
     "krUrl": "https://www.chaumet.com/kor_ko/bridal/wedding-bands",
     "jpUrl": "https://www.chaumet.com/jpn_ja/bridal/wedding-bands"
   },
@@ -262,7 +262,7 @@ let PRESETS = [
     "krPrice": 2240000,
     "guestCardAllowed": true,
     "tag": "백화점 5% 가능",
-    "imageUrl": "https://www.chaumet.com/media/catalog/product/0/8/085202_1.png",
+    "imageUrl": "./images/rings/chaumet-triomphe-sm.svg",
     "krUrl": "https://www.chaumet.com/kor_ko/bridal/wedding-bands",
     "jpUrl": "https://www.chaumet.com/jpn_ja/bridal/wedding-bands"
   },
@@ -275,7 +275,7 @@ let PRESETS = [
     "krPrice": 2880000,
     "guestCardAllowed": true,
     "tag": "백화점 5% 가능",
-    "imageUrl": "https://www.chaumet.com/media/catalog/product/0/8/085204_1.png",
+    "imageUrl": "./images/rings/chaumet-triomphe-md.svg",
     "krUrl": "https://www.chaumet.com/kor_ko/bridal/wedding-bands",
     "jpUrl": "https://www.chaumet.com/jpn_ja/bridal/wedding-bands"
   },
@@ -288,7 +288,7 @@ let PRESETS = [
     "krPrice": 5980000,
     "guestCardAllowed": true,
     "tag": "백화점 5% 가능",
-    "imageUrl": "https://www.chaumet.com/media/catalog/product/0/8/085203_1.png",
+    "imageUrl": "./images/rings/chaumet-triomphe-pave.svg",
     "krUrl": "https://www.chaumet.com/kor_ko/bridal/wedding-bands",
     "jpUrl": "https://www.chaumet.com/jpn_ja/bridal/wedding-bands"
   },
@@ -301,7 +301,7 @@ let PRESETS = [
     "krPrice": 1740000,
     "guestCardAllowed": true,
     "tag": "백화점 5% 가능",
-    "imageUrl": "https://www.chaumet.com/media/catalog/product/0/8/083434_1.png",
+    "imageUrl": "./images/rings/chaumet-bee.svg",
     "krUrl": "https://www.chaumet.com/kor_ko/bridal/wedding-bands",
     "jpUrl": "https://www.chaumet.com/jpn_ja/bridal/wedding-bands"
   },
@@ -314,7 +314,7 @@ let PRESETS = [
     "krPrice": 2280000,
     "guestCardAllowed": true,
     "tag": "백화점 5% 가능",
-    "imageUrl": "https://www.chaumet.com/media/catalog/product/0/8/083435_1.png",
+    "imageUrl": "./images/rings/chaumet-bee-1d.svg",
     "krUrl": "https://www.chaumet.com/kor_ko/bridal/wedding-bands",
     "jpUrl": "https://www.chaumet.com/jpn_ja/bridal/wedding-bands"
   },
@@ -327,7 +327,7 @@ let PRESETS = [
     "krPrice": 2810000,
     "guestCardAllowed": true,
     "tag": "지점별 5% 가능",
-    "imageUrl": "https://media2.bulgari.com/f_auto,q_auto/production/dw41a59c01/images/images/1319269.png",
+    "imageUrl": "./images/rings/bvlgari-bzero1-plain.svg",
     "krUrl": "https://www.bulgari.com/ko-kr/bridal/wedding-bands",
     "jpUrl": "https://www.bulgari.com/ja-jp/bridal/wedding-bands"
   },
@@ -340,7 +340,7 @@ let PRESETS = [
     "krPrice": 7300000,
     "guestCardAllowed": true,
     "tag": "지점별 5% 가능",
-    "imageUrl": "https://media2.bulgari.com/f_auto,q_auto/production/dw41a59c01/images/images/1321458.png",
+    "imageUrl": "./images/rings/bvlgari-bzero1-pave.svg",
     "krUrl": "https://www.bulgari.com/ko-kr/bridal/wedding-bands",
     "jpUrl": "https://www.bulgari.com/ja-jp/bridal/wedding-bands"
   },
@@ -353,7 +353,7 @@ let PRESETS = [
     "krPrice": 3190000,
     "guestCardAllowed": true,
     "tag": "지점별 5% 가능",
-    "imageUrl": "https://media2.bulgari.com/f_auto,q_auto/production/dw41a59c01/images/images/1337147.png",
+    "imageUrl": "./images/rings/bvlgari-serpenti-plain.svg",
     "krUrl": "https://www.bulgari.com/ko-kr/bridal/wedding-bands",
     "jpUrl": "https://www.bulgari.com/ja-jp/bridal/wedding-bands"
   },
@@ -366,7 +366,7 @@ let PRESETS = [
     "krPrice": 5650000,
     "guestCardAllowed": true,
     "tag": "지점별 5% 가능",
-    "imageUrl": "https://media2.bulgari.com/f_auto,q_auto/production/dw41a59c01/images/images/1338520.png",
+    "imageUrl": "./images/rings/bvlgari-serpenti-dia.svg",
     "krUrl": "https://www.bulgari.com/ko-kr/bridal/wedding-bands",
     "jpUrl": "https://www.bulgari.com/ja-jp/bridal/wedding-bands"
   },
@@ -379,7 +379,7 @@ let PRESETS = [
     "krPrice": 2680000,
     "guestCardAllowed": true,
     "tag": "지점별 5% 가능",
-    "imageUrl": "https://media2.bulgari.com/f_auto,q_auto/production/dw41a59c01/images/images/1336125.png",
+    "imageUrl": "./images/rings/bvlgari-infinito-plain.svg",
     "krUrl": "https://www.bulgari.com/ko-kr/bridal/wedding-bands",
     "jpUrl": "https://www.bulgari.com/ja-jp/bridal/wedding-bands"
   },
@@ -392,7 +392,7 @@ let PRESETS = [
     "krPrice": 3120000,
     "guestCardAllowed": true,
     "tag": "지점별 5% 가능",
-    "imageUrl": "https://media2.bulgari.com/f_auto,q_auto/production/dw41a59c01/images/images/1336128.png",
+    "imageUrl": "./images/rings/bvlgari-infinito-1d.svg",
     "krUrl": "https://www.bulgari.com/ko-kr/bridal/wedding-bands",
     "jpUrl": "https://www.bulgari.com/ja-jp/bridal/wedding-bands"
   },
@@ -405,7 +405,7 @@ let PRESETS = [
     "krPrice": 6850000,
     "guestCardAllowed": true,
     "tag": "지점별 5% 가능",
-    "imageUrl": "https://media2.bulgari.com/f_auto,q_auto/production/dw41a59c01/images/images/1336131.png",
+    "imageUrl": "./images/rings/bvlgari-infinito-pave.svg",
     "krUrl": "https://www.bulgari.com/ko-kr/bridal/wedding-bands",
     "jpUrl": "https://www.bulgari.com/ja-jp/bridal/wedding-bands"
   },
@@ -418,7 +418,7 @@ let PRESETS = [
     "krPrice": 2980000,
     "guestCardAllowed": true,
     "tag": "지점별 5% 가능",
-    "imageUrl": "https://media2.bulgari.com/f_auto,q_auto/production/dw41a59c01/images/images/1325140.png",
+    "imageUrl": "./images/rings/bvlgari-bb-1d.svg",
     "krUrl": "https://www.bulgari.com/ko-kr/bridal/wedding-bands",
     "jpUrl": "https://www.bulgari.com/ja-jp/bridal/wedding-bands"
   },
@@ -431,7 +431,7 @@ let PRESETS = [
     "krPrice": 2750000,
     "guestCardAllowed": true,
     "tag": "지점별 5% 가능",
-    "imageUrl": "https://media2.bulgari.com/f_auto,q_auto/production/dw41a59c01/images/images/1318524.png",
+    "imageUrl": "./images/rings/bvlgari-marryme-1d.svg",
     "krUrl": "https://www.bulgari.com/ko-kr/bridal/wedding-bands",
     "jpUrl": "https://www.bulgari.com/ja-jp/bridal/wedding-bands"
   },
@@ -444,7 +444,7 @@ let PRESETS = [
     "krPrice": 3850000,
     "guestCardAllowed": true,
     "tag": "지점별 5% 가능",
-    "imageUrl": "https://media2.bulgari.com/f_auto,q_auto/production/dw41a59c01/images/images/1318526.png",
+    "imageUrl": "./images/rings/bvlgari-marryme-5d.svg",
     "krUrl": "https://www.bulgari.com/ko-kr/bridal/wedding-bands",
     "jpUrl": "https://www.bulgari.com/ja-jp/bridal/wedding-bands"
   },
@@ -457,7 +457,7 @@ let PRESETS = [
     "krPrice": 4480000,
     "guestCardAllowed": false,
     "tag": "게스트카드 5% 불가",
-    "imageUrl": "https://www.chanel.com/images/as/t_one/q_auto:good,f_auto,fl_lossy,dpr_1.1/w_600/coco-crush-ring-beige-gold-18k-beige-gold-packshot-portee-1-j10817-73266669.jpg",
+    "imageUrl": "./images/rings/chanel-coco-sm.svg",
     "krUrl": "https://www.chanel.com/kr/fine-jewellery/coco-crush/",
     "jpUrl": "https://www.chanel.com/jp/fine-jewellery/coco-crush/"
   },
@@ -470,7 +470,7 @@ let PRESETS = [
     "krPrice": 5650000,
     "guestCardAllowed": false,
     "tag": "게스트카드 5% 불가",
-    "imageUrl": "https://www.chanel.com/images/as/t_one/q_auto:good,f_auto,fl_lossy,dpr_1.1/w_600/coco-crush-ring-beige-gold-18k-diamonds-packshot-portee-1-j11970-73266669.jpg",
+    "imageUrl": "./images/rings/chanel-coco-sm-dia.svg",
     "krUrl": "https://www.chanel.com/kr/fine-jewellery/coco-crush/",
     "jpUrl": "https://www.chanel.com/jp/fine-jewellery/coco-crush/"
   },
@@ -483,7 +483,7 @@ let PRESETS = [
     "krPrice": 2590000,
     "guestCardAllowed": false,
     "tag": "게스트카드 5% 불가",
-    "imageUrl": "https://www.chanel.com/images/as/t_one/q_auto:good,f_auto,fl_lossy,dpr_1.1/w_600/coco-crush-ring-beige-beige-gold-packshot-portee-1-j11785-73266669.jpg",
+    "imageUrl": "./images/rings/chanel-coco-mini.svg",
     "krUrl": "https://www.chanel.com/kr/fine-jewellery/coco-crush/",
     "jpUrl": "https://www.chanel.com/jp/fine-jewellery/coco-crush/"
   },
@@ -496,7 +496,7 @@ let PRESETS = [
     "krPrice": 7410000,
     "guestCardAllowed": true,
     "tag": "지점별 5% 가능",
-    "imageUrl": "https://www.boucheron.com/media/catalog/product/cache/057be03577d67f5cebb6d5ff2bbdf5b3/j/r/jrg00290_1.png",
+    "imageUrl": "./images/rings/boucheron-quatre-jrg00290.svg",
     "krUrl": "https://www.boucheron.com/ko-kr/bridal/wedding-bands.html",
     "jpUrl": "https://www.boucheron.com/ja-jp/bridal/wedding-bands.html"
   },
@@ -509,7 +509,7 @@ let PRESETS = [
     "krPrice": 8800000,
     "guestCardAllowed": true,
     "tag": "지점별 5% 가능",
-    "imageUrl": "https://www.boucheron.com/media/catalog/product/cache/057be03577d67f5cebb6d5ff2bbdf5b3/j/a/jal00280_1.png",
+    "imageUrl": "./images/rings/boucheron-quatre-jal00280.svg",
     "krUrl": "https://www.boucheron.com/ko-kr/bridal/wedding-bands.html",
     "jpUrl": "https://www.boucheron.com/ja-jp/bridal/wedding-bands.html"
   },
@@ -522,7 +522,7 @@ let PRESETS = [
     "krPrice": 3910000,
     "guestCardAllowed": true,
     "tag": "지점별 5% 가능",
-    "imageUrl": "https://www.boucheron.com/media/catalog/product/cache/057be03577d67f5cebb6d5ff2bbdf5b3/j/a/jal00300_1.png",
+    "imageUrl": "./images/rings/boucheron-quatre-jal00300.svg",
     "krUrl": "https://www.boucheron.com/ko-kr/bridal/wedding-bands.html",
     "jpUrl": "https://www.boucheron.com/ja-jp/bridal/wedding-bands.html"
   },
@@ -535,7 +535,7 @@ let PRESETS = [
     "krPrice": 2940000,
     "guestCardAllowed": true,
     "tag": "지점별 5% 가능",
-    "imageUrl": "https://www.boucheron.com/media/catalog/product/cache/057be03577d67f5cebb6d5ff2bbdf5b3/j/a/jal00014_1.png",
+    "imageUrl": "./images/rings/boucheron-facette.svg",
     "krUrl": "https://www.boucheron.com/ko-kr/bridal/wedding-bands.html",
     "jpUrl": "https://www.boucheron.com/ja-jp/bridal/wedding-bands.html"
   },
@@ -548,7 +548,7 @@ let PRESETS = [
     "krPrice": 2150000,
     "guestCardAllowed": true,
     "tag": "백화점 5% 가능",
-    "imageUrl": "https://www.tasaki.co.jp/medias/sys_master/images/images/h67/hd7/8834789507102/RD-F2643-18KSG_01.jpg",
+    "imageUrl": "./images/rings/tasaki-trapezio-plain.svg",
     "krUrl": "https://www.tasaki-global.com/bridal/marriage/",
     "jpUrl": "https://www.tasaki.co.jp/bridal/marriage/"
   },
@@ -561,7 +561,7 @@ let PRESETS = [
     "krPrice": 2550000,
     "guestCardAllowed": true,
     "tag": "백화점 5% 가능",
-    "imageUrl": "https://www.tasaki.co.jp/medias/sys_master/images/images/h33/hba/8834789834782/RD-F2644-18KSG_01.jpg",
+    "imageUrl": "./images/rings/tasaki-trapezio-1d.svg",
     "krUrl": "https://www.tasaki-global.com/bridal/marriage/",
     "jpUrl": "https://www.tasaki.co.jp/bridal/marriage/"
   },
@@ -574,7 +574,7 @@ let PRESETS = [
     "krPrice": 1980000,
     "guestCardAllowed": true,
     "tag": "백화점 5% 가능",
-    "imageUrl": "https://www.tasaki.co.jp/medias/sys_master/images/images/h90/he9/8834788524062/RD-F2284-18KSG_01.jpg",
+    "imageUrl": "./images/rings/tasaki-piano-plain.svg",
     "krUrl": "https://www.tasaki-global.com/bridal/marriage/",
     "jpUrl": "https://www.tasaki.co.jp/bridal/marriage/"
   },
@@ -587,7 +587,7 @@ let PRESETS = [
     "krPrice": 2680000,
     "guestCardAllowed": true,
     "tag": "백화점 5% 가능",
-    "imageUrl": "https://www.tasaki.co.jp/medias/sys_master/images/images/h29/h1d/8834788851742/RD-F2285-18KSG_01.jpg",
+    "imageUrl": "./images/rings/tasaki-piano-dia.svg",
     "krUrl": "https://www.tasaki-global.com/bridal/marriage/",
     "jpUrl": "https://www.tasaki.co.jp/bridal/marriage/"
   },
@@ -600,7 +600,7 @@ let PRESETS = [
     "krPrice": 3650000,
     "guestCardAllowed": true,
     "tag": "지점별 5% 가능",
-    "imageUrl": "https://www.graff.com/dw/image/v2/BFNT_PRD/on/demandware.static/-/Sites-master-catalog/default/dwd3307b39/sfcc-graff-staging/i/m/a/g/e/images_hi_res_RGR778_GR83381_Hero_1.jpg",
+    "imageUrl": "./images/rings/graff-laurence-plain.svg",
     "krUrl": "https://www.graff.com/kr-ko/bridal/wedding-bands/",
     "jpUrl": "https://www.graff.com/jp-ja/bridal/wedding-bands/"
   },
@@ -613,7 +613,7 @@ let PRESETS = [
     "krPrice": 4340000,
     "guestCardAllowed": true,
     "tag": "지점별 5% 가능",
-    "imageUrl": "https://www.graff.com/dw/image/v2/BFNT_PRD/on/demandware.static/-/Sites-master-catalog/default/dw83a218f4/sfcc-graff-staging/i/m/a/g/e/images_hi_res_RGR780_GR83383_Hero_1.jpg",
+    "imageUrl": "./images/rings/graff-laurence-semi.svg",
     "krUrl": "https://www.graff.com/kr-ko/bridal/wedding-bands/",
     "jpUrl": "https://www.graff.com/jp-ja/bridal/wedding-bands/"
   },
@@ -626,7 +626,7 @@ let PRESETS = [
     "krPrice": 6300000,
     "guestCardAllowed": true,
     "tag": "지점별 5% 가능",
-    "imageUrl": "https://www.graff.com/dw/image/v2/BFNT_PRD/on/demandware.static/-/Sites-master-catalog/default/dw10d297a7/sfcc-graff-staging/i/m/a/g/e/images_hi_res_RGR779_GR83382_Hero_1.jpg",
+    "imageUrl": "./images/rings/graff-laurence-pave.svg",
     "krUrl": "https://www.graff.com/kr-ko/bridal/wedding-bands/",
     "jpUrl": "https://www.graff.com/jp-ja/bridal/wedding-bands/"
   },
@@ -639,7 +639,7 @@ let PRESETS = [
     "krPrice": 3300000,
     "guestCardAllowed": true,
     "tag": "지점별 5% 가능",
-    "imageUrl": "https://www.graff.com/dw/image/v2/BFNT_PRD/on/demandware.static/-/Sites-master-catalog/default/dwd3307b39/sfcc-graff-staging/i/m/a/g/e/images_hi_res_RGR778_GR83381_Hero_1.jpg",
+    "imageUrl": "./images/rings/graff-spiral-plain.svg",
     "krUrl": "https://www.graff.com/kr-ko/bridal/wedding-bands/",
     "jpUrl": "https://www.graff.com/jp-ja/bridal/wedding-bands/"
   },
@@ -652,7 +652,7 @@ let PRESETS = [
     "krPrice": 10210000,
     "guestCardAllowed": true,
     "tag": "지점별 5% 가능",
-    "imageUrl": "https://www.graff.com/dw/image/v2/BFNT_PRD/on/demandware.static/-/Sites-master-catalog/default/dw10d297a7/sfcc-graff-staging/i/m/a/g/e/images_hi_res_RGR779_GR83382_Hero_1.jpg",
+    "imageUrl": "./images/rings/graff-spiral-pave.svg",
     "krUrl": "https://www.graff.com/kr-ko/bridal/wedding-bands/",
     "jpUrl": "https://www.graff.com/jp-ja/bridal/wedding-bands/"
   }
@@ -878,9 +878,8 @@ function renderCrawlLogModal(logData, filterQuery = '') {
 
     const krStatusClass = getStatusClass(item.krStatus, item.krCode);
     const jpStatusClass = getStatusClass(item.jpStatus, item.jpCode);
-    const thumbHtml = item.imageUrl
-      ? `<div class="log-thumb-box"><img src="${item.imageUrl}" alt="${item.name}" class="log-thumb-img" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentElement.style.display='none'" /></div>`
-      : '';
+    const thumbSrc = item.imageUrl || `./images/rings/${item.id}.svg`;
+    const thumbHtml = `<div class="log-thumb-box"><img src="${thumbSrc}" alt="${item.name}" class="log-thumb-img" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='./images/rings/${item.id}.svg';" /></div>`;
 
     card.innerHTML = `
       <div class="log-ring-info-wrap">
@@ -960,7 +959,7 @@ function renderQuickSummary() {
   if (list.length === 0) {
     dom.quickSummaryTableBody.innerHTML = `
       <tr>
-        <td colspan="5" style="text-align: center; padding: 40px; color: var(--text-muted);">
+        <td colspan="6" style="text-align: center; padding: 40px; color: var(--text-muted);">
           🔍 일치하는 웨딩밴드가 없습니다. 검색어를 변경해 보세요.
         </td>
       </tr>
@@ -980,7 +979,12 @@ function renderQuickSummary() {
       ? `<a href="${p.jpUrl}" target="_blank" rel="noopener noreferrer" class="quick-url-link jp" title="일본 공식몰 새창 열기">일본 공식몰 ↗</a>`
       : `<span class="quick-no-url">-</span>`;
 
+    const thumbSrc = p.imageUrl || `./images/rings/${p.id}.svg`;
+
     tr.innerHTML = `
+      <td class="td-img">
+        <div class="quick-thumb-box"><img src="${thumbSrc}" alt="${p.name}" class="quick-thumb-img" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='./images/rings/${p.id}.svg';" /></div>
+      </td>
       <td class="td-brand">
         <span class="quick-brand-badge">${p.brandKr || p.brand}</span>
       </td>
@@ -1067,9 +1071,8 @@ function renderPresets() {
     card.dataset.id = item.id;
     
     const tagClass = item.guestCardAllowed ? 'guest-ok' : 'no-guest';
-    const imgHtml = item.imageUrl
-      ? `<div class="preset-img-box"><img src="${item.imageUrl}" alt="${item.name}" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentElement.style.display='none'" /></div>`
-      : '';
+    const imgSrc = item.imageUrl || `./images/rings/${item.id}.svg`;
+    const imgHtml = `<div class="preset-img-box"><img src="${imgSrc}" alt="${item.name}" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='./images/rings/${item.id}.svg';" /></div>`;
     
     const krLinkHtml = item.krUrl 
       ? `<a href="${item.krUrl}" target="_blank" rel="noopener noreferrer" class="preset-icon-link kr" title="🇰🇷 한국 공식몰 웨딩링 컬렉션 바로가기" onclick="event.stopPropagation()">🇰🇷 웨딩링</a>`

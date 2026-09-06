@@ -1950,6 +1950,30 @@ body.light-theme .quick-summary-table td {
   border-bottom-color: rgba(0, 0, 0, 0.05);
 }
 
+.quick-thumb-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  flex-shrink: 0;
+}
+
+body.light-theme .quick-thumb-box {
+  background: #FFFFFF;
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+.quick-thumb-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
 .quick-row {
   cursor: pointer;
   transition: background var(--transition-fast);
