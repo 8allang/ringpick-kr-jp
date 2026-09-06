@@ -255,6 +255,23 @@ body.light-theme .title {
   margin-left: auto;
 }
 
+.disclaimer-banner {
+  background: rgba(212, 175, 55, 0.08);
+  border: 1px dashed rgba(212, 175, 55, 0.35);
+  border-radius: var(--radius-sm);
+  padding: 8px 14px;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+  word-break: keep-all;
+}
+
+body.light-theme .disclaimer-banner {
+  background: rgba(170, 130, 10, 0.06);
+  border-color: rgba(170, 130, 10, 0.25);
+  color: var(--text-secondary);
+}
+
 /* Brand Filter Bar */
 .brand-filter-bar {
   display: flex;

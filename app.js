@@ -15,7 +15,7 @@ let PRESETS = [
     "krPrice": 2190000,
     "guestCardAllowed": false,
     "tag": "게스트카드 5% 불가",
-    "imageUrl": "./images/rings/cartier-love-sm.svg",
+    "imageUrl": "./images/rings/cartier-love-sm.png",
     "krUrl": "https://www.cartier.com/ko-kr/주얼리/컬렉션/웨딩-밴드/",
     "jpUrl": "https://www.cartier.com/ja-jp/ジュエリー/カテゴリー/結婚指輪"
   },
@@ -28,7 +28,7 @@ let PRESETS = [
     "krPrice": 3330000,
     "guestCardAllowed": false,
     "tag": "게스트카드 5% 불가",
-    "imageUrl": "./images/rings/cartier-love-cl.svg",
+    "imageUrl": "./images/rings/cartier-love-cl.png",
     "krUrl": "https://www.cartier.com/ko-kr/주얼리/컬렉션/웨딩-밴드/",
     "jpUrl": "https://www.cartier.com/ja-jp/ジュエリー/カテゴリー/結婚指輪"
   },
@@ -54,7 +54,7 @@ let PRESETS = [
     "krPrice": 2620000,
     "guestCardAllowed": false,
     "tag": "게스트카드 5% 불가",
-    "imageUrl": "./images/rings/cartier-trinity-cl.svg",
+    "imageUrl": "./images/rings/cartier-trinity-cl.png",
     "krUrl": "https://www.cartier.com/ko-kr/주얼리/컬렉션/웨딩-밴드/",
     "jpUrl": "https://www.cartier.com/ja-jp/ジュエリー/カテゴリー/結婚指輪"
   },
@@ -171,7 +171,7 @@ let PRESETS = [
     "krPrice": 2850000,
     "guestCardAllowed": true,
     "tag": "지점별 5% 가능",
-    "imageUrl": "./images/rings/tiffany-band-3dia.svg",
+    "imageUrl": "./images/rings/tiffany-band-3dia.jpg",
     "krUrl": "https://www.tiffany.kr/wedding/wedding-rings/",
     "jpUrl": "https://www.tiffany.co.jp/wedding/wedding-rings/"
   },
@@ -184,7 +184,7 @@ let PRESETS = [
     "krPrice": 2650000,
     "guestCardAllowed": true,
     "tag": "백화점 5% 가능",
-    "imageUrl": "./images/rings/chaumet-torsade-pg.svg",
+    "imageUrl": "./images/rings/chaumet-torsade-pg.png",
     "krUrl": "https://www.chaumet.com/kor_ko/bridal/wedding-bands",
     "jpUrl": "https://www.chaumet.com/jpn_ja/bridal/wedding-bands"
   },
@@ -197,7 +197,7 @@ let PRESETS = [
     "krPrice": 3100000,
     "guestCardAllowed": true,
     "tag": "백화점 5% 가능",
-    "imageUrl": "./images/rings/chaumet-torsade-pt.svg",
+    "imageUrl": "./images/rings/chaumet-torsade-pt.png",
     "krUrl": "https://www.chaumet.com/kor_ko/bridal/wedding-bands",
     "jpUrl": "https://www.chaumet.com/jpn_ja/bridal/wedding-bands"
   },
@@ -210,7 +210,7 @@ let PRESETS = [
     "krPrice": 3550000,
     "guestCardAllowed": true,
     "tag": "백화점 5% 가능",
-    "imageUrl": "./images/rings/chaumet-torsade-1d.svg",
+    "imageUrl": "./images/rings/chaumet-torsade-1d.png",
     "krUrl": "https://www.chaumet.com/kor_ko/bridal/wedding-bands",
     "jpUrl": "https://www.chaumet.com/jpn_ja/bridal/wedding-bands"
   },
@@ -223,7 +223,7 @@ let PRESETS = [
     "krPrice": 7420000,
     "guestCardAllowed": true,
     "tag": "백화점 5% 가능",
-    "imageUrl": "./images/rings/chaumet-torsade-pave.svg",
+    "imageUrl": "./images/rings/chaumet-torsade-pave.png",
     "krUrl": "https://www.chaumet.com/kor_ko/bridal/wedding-bands",
     "jpUrl": "https://www.chaumet.com/jpn_ja/bridal/wedding-bands"
   },
@@ -236,7 +236,7 @@ let PRESETS = [
     "krPrice": 2880000,
     "guestCardAllowed": true,
     "tag": "백화점 5% 가능",
-    "imageUrl": "./images/rings/chaumet-liens.svg",
+    "imageUrl": "./images/rings/chaumet-liens.png",
     "krUrl": "https://www.chaumet.com/kor_ko/bridal/wedding-bands",
     "jpUrl": "https://www.chaumet.com/jpn_ja/bridal/wedding-bands"
   },
@@ -249,7 +249,7 @@ let PRESETS = [
     "krPrice": 3740000,
     "guestCardAllowed": true,
     "tag": "백화점 5% 가능",
-    "imageUrl": "./images/rings/chaumet-liens-dia.svg",
+    "imageUrl": "./images/rings/chaumet-liens-dia.png",
     "krUrl": "https://www.chaumet.com/kor_ko/bridal/wedding-bands",
     "jpUrl": "https://www.chaumet.com/jpn_ja/bridal/wedding-bands"
   },
@@ -262,7 +262,7 @@ let PRESETS = [
     "krPrice": 2240000,
     "guestCardAllowed": true,
     "tag": "백화점 5% 가능",
-    "imageUrl": "./images/rings/chaumet-triomphe-sm.svg",
+    "imageUrl": "./images/rings/chaumet-triomphe-sm.png",
     "krUrl": "https://www.chaumet.com/kor_ko/bridal/wedding-bands",
     "jpUrl": "https://www.chaumet.com/jpn_ja/bridal/wedding-bands"
   },
@@ -275,7 +275,7 @@ let PRESETS = [
     "krPrice": 2880000,
     "guestCardAllowed": true,
     "tag": "백화점 5% 가능",
-    "imageUrl": "./images/rings/chaumet-triomphe-md.svg",
+    "imageUrl": "./images/rings/chaumet-triomphe-md.png",
     "krUrl": "https://www.chaumet.com/kor_ko/bridal/wedding-bands",
     "jpUrl": "https://www.chaumet.com/jpn_ja/bridal/wedding-bands"
   },
@@ -288,7 +288,7 @@ let PRESETS = [
     "krPrice": 5980000,
     "guestCardAllowed": true,
     "tag": "백화점 5% 가능",
-    "imageUrl": "./images/rings/chaumet-triomphe-pave.svg",
+    "imageUrl": "./images/rings/chaumet-triomphe-pave.png",
     "krUrl": "https://www.chaumet.com/kor_ko/bridal/wedding-bands",
     "jpUrl": "https://www.chaumet.com/jpn_ja/bridal/wedding-bands"
   },
@@ -301,7 +301,7 @@ let PRESETS = [
     "krPrice": 1740000,
     "guestCardAllowed": true,
     "tag": "백화점 5% 가능",
-    "imageUrl": "./images/rings/chaumet-bee.svg",
+    "imageUrl": "./images/rings/chaumet-bee.png",
     "krUrl": "https://www.chaumet.com/kor_ko/bridal/wedding-bands",
     "jpUrl": "https://www.chaumet.com/jpn_ja/bridal/wedding-bands"
   },
@@ -314,7 +314,7 @@ let PRESETS = [
     "krPrice": 2280000,
     "guestCardAllowed": true,
     "tag": "백화점 5% 가능",
-    "imageUrl": "./images/rings/chaumet-bee-1d.svg",
+    "imageUrl": "./images/rings/chaumet-bee-1d.png",
     "krUrl": "https://www.chaumet.com/kor_ko/bridal/wedding-bands",
     "jpUrl": "https://www.chaumet.com/jpn_ja/bridal/wedding-bands"
   },
@@ -327,7 +327,7 @@ let PRESETS = [
     "krPrice": 2810000,
     "guestCardAllowed": true,
     "tag": "지점별 5% 가능",
-    "imageUrl": "./images/rings/bvlgari-bzero1-plain.svg",
+    "imageUrl": "./images/rings/bvlgari-bzero1-plain.png",
     "krUrl": "https://www.bulgari.com/ko-kr/bridal/wedding-bands",
     "jpUrl": "https://www.bulgari.com/ja-jp/bridal/wedding-bands"
   },
@@ -353,7 +353,7 @@ let PRESETS = [
     "krPrice": 3190000,
     "guestCardAllowed": true,
     "tag": "지점별 5% 가능",
-    "imageUrl": "./images/rings/bvlgari-serpenti-plain.svg",
+    "imageUrl": "./images/rings/bvlgari-serpenti-plain.png",
     "krUrl": "https://www.bulgari.com/ko-kr/bridal/wedding-bands",
     "jpUrl": "https://www.bulgari.com/ja-jp/bridal/wedding-bands"
   },
@@ -457,7 +457,7 @@ let PRESETS = [
     "krPrice": 4480000,
     "guestCardAllowed": false,
     "tag": "게스트카드 5% 불가",
-    "imageUrl": "./images/rings/chanel-coco-sm.svg",
+    "imageUrl": "./images/rings/chanel-coco-sm.jpg",
     "krUrl": "https://www.chanel.com/kr/fine-jewellery/coco-crush/",
     "jpUrl": "https://www.chanel.com/jp/fine-jewellery/coco-crush/"
   },
@@ -470,7 +470,7 @@ let PRESETS = [
     "krPrice": 5650000,
     "guestCardAllowed": false,
     "tag": "게스트카드 5% 불가",
-    "imageUrl": "./images/rings/chanel-coco-sm-dia.svg",
+    "imageUrl": "./images/rings/chanel-coco-sm-dia.jpg",
     "krUrl": "https://www.chanel.com/kr/fine-jewellery/coco-crush/",
     "jpUrl": "https://www.chanel.com/jp/fine-jewellery/coco-crush/"
   },
@@ -483,7 +483,7 @@ let PRESETS = [
     "krPrice": 2590000,
     "guestCardAllowed": false,
     "tag": "게스트카드 5% 불가",
-    "imageUrl": "./images/rings/chanel-coco-mini.svg",
+    "imageUrl": "./images/rings/chanel-coco-mini.jpg",
     "krUrl": "https://www.chanel.com/kr/fine-jewellery/coco-crush/",
     "jpUrl": "https://www.chanel.com/jp/fine-jewellery/coco-crush/"
   },
@@ -600,7 +600,7 @@ let PRESETS = [
     "krPrice": 3650000,
     "guestCardAllowed": true,
     "tag": "지점별 5% 가능",
-    "imageUrl": "./images/rings/graff-laurence-plain.svg",
+    "imageUrl": "./images/rings/graff-laurence-plain.jpg",
     "krUrl": "https://www.graff.com/kr-ko/bridal/wedding-bands/",
     "jpUrl": "https://www.graff.com/jp-ja/bridal/wedding-bands/"
   },
@@ -639,7 +639,7 @@ let PRESETS = [
     "krPrice": 3300000,
     "guestCardAllowed": true,
     "tag": "지점별 5% 가능",
-    "imageUrl": "./images/rings/graff-spiral-plain.svg",
+    "imageUrl": "./images/rings/graff-spiral-plain.jpg",
     "krUrl": "https://www.graff.com/kr-ko/bridal/wedding-bands/",
     "jpUrl": "https://www.graff.com/jp-ja/bridal/wedding-bands/"
   },
