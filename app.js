@@ -497,7 +497,6 @@ const dom = {
   krGiftDiscount: document.getElementById('krGiftDiscount'),
   krCustomGiftWrap: document.getElementById('krCustomGiftWrap'),
   krCustomGift: document.getElementById('krCustomGift'),
-  krMileage: document.getElementById('krMileage'),
   selectedKrStoreLink: document.getElementById('selectedKrStoreLink'),
   
   jpyKrwRate: document.getElementById('jpyKrwRate'),
@@ -1055,8 +1054,7 @@ function calculatePrices() {
     giftDiscountRate = parseFloat(dom.krGiftDiscount.value) || 0;
   }
   
-  const mileageRate = parseFloat(dom.krMileage.value) || 0;
-  const totalKrDiscountPercent = giftDiscountRate + mileageRate;
+  const totalKrDiscountPercent = giftDiscountRate;
   
   const krDiscountKRW = Math.round(baseKr * (totalKrDiscountPercent / 100));
   const totalKoreaKRW = baseKr - krDiscountKRW;
@@ -1141,7 +1139,7 @@ function calculateAndRender() {
       dom.verdictDiffAmount.textContent = formatKRW(Math.abs(data.diffKRW));
       dom.verdictDiffAmount.style.color = '#93C5FD';
       dom.verdictDiffPercent.textContent = `(한국이 ${Math.abs(data.savePercent).toFixed(1)}% 더 저렴)`;
-      dom.travelMsg.textContent = '국내 백화점 상품권 할인 및 웨딩 마일리지를 활용해 한국에서 구매하는 것이 더 유리합니다.';
+      dom.travelMsg.textContent = '국내 백화점 상품권 할인을 활용해 한국에서 구매하는 것이 더 유리합니다.';
     } else {
       dom.verdictDiffAmount.textContent = '0원';
       dom.verdictDiffAmount.style.color = '#93C5FD';
@@ -1253,7 +1251,7 @@ function calculateAndRender() {
   if (data.krDiscountKRW > 0) {
     krLinesHTML += `
       <div class="receipt-line">
-        <span class="r-label">상품권/마일리지 할인 (${data.totalKrDiscountPercent.toFixed(1)}%)</span>
+        <span class="r-label">백화점 상품권 할인 (${data.totalKrDiscountPercent.toFixed(1)}%)</span>
         <span class="r-val discount">-${formatKRW(data.krDiscountKRW)}</span>
       </div>
     `;
@@ -1564,7 +1562,6 @@ function setupEventListeners() {
   });
   
   dom.krCustomGift.addEventListener('input', () => calculateAndRender());
-  dom.krMileage.addEventListener('change', () => calculateAndRender());
   
   [dom.jpyKrwRate, dom.usdKrwRate, dom.usdJpyRate].forEach(input => {
     input.addEventListener('input', () => calculateAndRender());
