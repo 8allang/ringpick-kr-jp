@@ -1102,8 +1102,11 @@ function calculatePrices() {
 function calculateAndRender() {
   const data = calculatePrices();
   
-  // Update Verdict Banner
-  if (data.diffKRW > 0) {
+  // Update Verdict Banner according to price difference thresholds:
+  // 1) 30만원 이상 차이: 일본 구매 강력 추천!
+  // 2) 20만원 이상~30만원 미만 차이: 일본이 더 저렴!
+  // 3) 20만원 미만 차이: 이정도면 한국에서 삽시다..
+  if (data.diffKRW >= 300000) {
     dom.verdictTrophy.textContent = '🏆';
     dom.verdictWinnerBadge.textContent = '일본 구매 강력 추천!';
     dom.verdictWinnerBadge.style.color = '#34D399';
@@ -1113,25 +1116,38 @@ function calculateAndRender() {
     
     if (data.diffKRW >= 800000) {
       dom.travelMsg.textContent = `🎉 차액(${formatKRW(data.diffKRW)})으로 2인 일본 왕복 항공권 + 5성급 호텔 숙박비가 나옵니다!`;
-    } else if (data.diffKRW >= 350000) {
-      dom.travelMsg.textContent = `✈️ 차액(${formatKRW(data.diffKRW)})으로 도쿄/오사카 왕복 항공권 1인 비용을 뽑을 수 있습니다!`;
     } else {
-      dom.travelMsg.textContent = `🍣 차액(${formatKRW(data.diffKRW)})으로 일본 고급 오마카세 2인 식사 비용을 절약합니다!`;
+      dom.travelMsg.textContent = `✈️ 차액(${formatKRW(data.diffKRW)})으로 일본 왕복 항공권 1인 비용 이상을 아낄 수 있습니다!`;
     }
-  } else if (data.diffKRW < 0) {
-    dom.verdictTrophy.textContent = '🇰🇷';
-    dom.verdictWinnerBadge.textContent = '한국 백화점 구매 추천!';
-    dom.verdictWinnerBadge.style.color = '#60A5FA';
-    dom.verdictDiffAmount.textContent = formatKRW(Math.abs(data.diffKRW));
-    dom.verdictDiffAmount.style.color = '#93C5FD';
-    dom.verdictDiffPercent.textContent = `(한국이 ${data.savePercent.toFixed(1)}% 더 저렴)`;
-    dom.travelMsg.textContent = '국내 백화점 상품권 할인 및 웨딩 마일리지를 활용해 국내에서 구매하는 것이 더 유리합니다.';
+  } else if (data.diffKRW >= 200000) {
+    dom.verdictTrophy.textContent = '✈️';
+    dom.verdictWinnerBadge.textContent = '일본이 더 저렴!';
+    dom.verdictWinnerBadge.style.color = '#10B981';
+    dom.verdictDiffAmount.textContent = formatKRW(data.diffKRW);
+    dom.verdictDiffAmount.style.color = '#FCD34D';
+    dom.verdictDiffPercent.textContent = `(${data.savePercent.toFixed(1)}% 절약)`;
+    dom.travelMsg.textContent = `🍣 차액(${formatKRW(data.diffKRW)})으로 일본 여행 중 오마카세 식사 및 쇼핑 비용을 절약할 수 있습니다!`;
   } else {
-    dom.verdictTrophy.textContent = '⚖️';
-    dom.verdictWinnerBadge.textContent = '일본과 한국 가격이 동일합니다';
-    dom.verdictDiffAmount.textContent = '0원';
-    dom.verdictDiffPercent.textContent = '';
-    dom.travelMsg.textContent = '국내외 총 결제 비용이 동일하므로 A/S 편의성에 따라 선택하세요.';
+    dom.verdictTrophy.textContent = '🇰🇷';
+    dom.verdictWinnerBadge.textContent = '이정도면 한국에서 삽시다..';
+    dom.verdictWinnerBadge.style.color = '#60A5FA';
+    
+    if (data.diffKRW > 0) {
+      dom.verdictDiffAmount.textContent = formatKRW(data.diffKRW);
+      dom.verdictDiffAmount.style.color = '#93C5FD';
+      dom.verdictDiffPercent.textContent = `(${data.savePercent.toFixed(1)}% 차이)`;
+      dom.travelMsg.textContent = '가격 차이가 20만 원 미만이므로 A/S 편의성과 백화점 혜택이 좋은 한국 구매를 권장합니다.';
+    } else if (data.diffKRW < 0) {
+      dom.verdictDiffAmount.textContent = formatKRW(Math.abs(data.diffKRW));
+      dom.verdictDiffAmount.style.color = '#93C5FD';
+      dom.verdictDiffPercent.textContent = `(한국이 ${Math.abs(data.savePercent).toFixed(1)}% 더 저렴)`;
+      dom.travelMsg.textContent = '국내 백화점 상품권 할인 및 웨딩 마일리지를 활용해 한국에서 구매하는 것이 더 유리합니다.';
+    } else {
+      dom.verdictDiffAmount.textContent = '0원';
+      dom.verdictDiffAmount.style.color = '#93C5FD';
+      dom.verdictDiffPercent.textContent = '';
+      dom.travelMsg.textContent = '국내외 총 결제 비용이 동일하므로 A/S 및 수령 편의성에 따라 선택하세요.';
+    }
   }
   
   // Progress Comparison Bar
