@@ -36,7 +36,7 @@ let PRESETS = [
     "id": "cartier-c-de-cartier-1d",
     "brand": "Cartier",
     "brandKr": "까르띠에",
-    "name": "C 드 까르띠에 (1다이아 3mm 0.03ct)",
+    "name": "C 드 까르띠에 (1다이아 3mm, 0.03ct)",
     "krPrice": 2650000,
     "jpPrice": 286000,
     "guestCardAllowed": false,
@@ -57,19 +57,6 @@ let PRESETS = [
     "krUrl": "https://www.cartier.com/ko-kr/%EC%A3%BC%EC%96%BC%EB%A6%AC/%EB%A7%81/%ED%8A%B8%EB%A6%AC%EB%8B%88%ED%8B%B0/%ED%8A%B8%EB%A6%AC%EB%8B%88%ED%8B%B0-%EB%A7%81-%ED%81%B4%EB%9E%98%EC%8B%9D-%EB%AA%A8%EB%8D%B8-CRB4234200.html",
     "jpUrl": "https://www.cartier.com/ja-jp/jewellery/rings/trinity/%E3%83%88%E3%83%AA%E3%83%8B%E3%83%86%E3%82%A3-%E3%83%AA%E3%83%B3%E3%82%AF-%E3%82%AF%E3%83%A9%E3%82%B7%E3%83%83%E3%82%AF%E3%83%A2%E3%83%86-%E3%83%AB-CRB4234200",
     "imageUrl": "./images/rings/cartier-trinity-cl.png"
-  },
-  {
-    "id": "cartier-vendome-35",
-    "brand": "Cartier",
-    "brandKr": "까르띠에",
-    "name": "방돔 루이 까르띠에 웨딩 밴드 (3.5mm)",
-    "krPrice": 2560000,
-    "jpPrice": 224400,
-    "guestCardAllowed": false,
-    "tag": "게스트카드 5% 불가",
-    "krUrl": "https://www.cartier.com/ko-kr/%EC%A3%BC%EC%96%BC%EB%A6%AC/%EC%9B%A8%EB%94%A9-%EB%B0%B4%EB%93%9C/%EB%A3%A8%EC%9D%B4-%EA%B9%8C%EB%A5%B4%EB%9D%A0%EC%97%90-%EB%B0%A9%EB%8F%94/%EB%B0%A9%EB%8F%94-%EB%A3%A8%EC%9D%B4-%EA%B9%8C%EB%A5%B4%EB%9D%A0%EC%97%90-%EC%9B%A8%EB%94%A9-%EB%A7%81-%ED%8F%AD-3.5mm-CRB4052200.html",
-    "jpUrl": "https://www.cartier.com/ja-jp/ジュエリー/カテゴリー/結婚指輪",
-    "imageUrl": "./images/rings/cartier-vendome-35.svg"
   },
   {
     "id": "tiffany-milgrain-4mm",
@@ -114,12 +101,12 @@ let PRESETS = [
     "id": "tiffany-harmony-dia",
     "brand": "Tiffany & Co.",
     "brandKr": "티파니",
-    "name": "티파니 하모니 밴드 링 (로즈골드 다이아)",
+    "name": "티파니 하모니 밴드 링 (로즈골드, 다이아몬드 세팅)",
     "krPrice": 5100000,
     "jpPrice": 528000,
     "guestCardAllowed": true,
     "tag": "지점별 5% 가능",
-    "krUrl": "https://www.tiffany.kr/jewelry/rings/tiffany-harmony-18k-rose-gold-round-brilliant-diamonds-rings-60004611.html",
+    "krUrl": "https://www.tiffany.kr/jewelry/rings/tiffany-harmony-18k-rose-gold-round-brilliant-diamonds-rings-60004611.html?queryID=dc417a9c24002b10fcbb5a1998adaeb7&objectID=60004611&indexName=ecommerce_kr_products__ko_KR&searchQuery=harm",
     "jpUrl": "https://www.tiffany.co.jp/jewelry/rings/tiffany-harmony-band-ring-GRP08146/",
     "imageUrl": "./images/rings/tiffany-harmony-dia.svg"
   },
@@ -127,7 +114,7 @@ let PRESETS = [
     "id": "tiffany-band-3dia",
     "brand": "Tiffany & Co.",
     "brandKr": "티파니",
-    "name": "티파니 T&CO 밴드 링 (3mm 0.01ct)",
+    "name": "티파니 T&CO 밴드 링 (3m, 0.01ct)",
     "krPrice": 2580000,
     "jpPrice": 258500,
     "guestCardAllowed": true,
@@ -140,7 +127,7 @@ let PRESETS = [
     "id": "chanel-coco-mini",
     "brand": "Chanel",
     "brandKr": "샤넬",
-    "name": "코코 크러쉬 링 (베이지골드 미니 노다이아)",
+    "name": "코코 크러쉬 링 (베이지골드, 미니 노다이아)",
     "krPrice": 3020000,
     "jpPrice": 308000,
     "guestCardAllowed": false,
@@ -153,7 +140,7 @@ let PRESETS = [
     "id": "chanel-coco-mini-dia",
     "brand": "Chanel",
     "brandKr": "샤넬",
-    "name": "코코 크러쉬 링 (베이지골드 미니 다이아)",
+    "name": "코코 크러쉬 링 (베이지골드, 미니 다이아몬드)",
     "krPrice": 8820000,
     "jpPrice": 902000,
     "guestCardAllowed": false,
@@ -166,7 +153,7 @@ let PRESETS = [
     "id": "bvlgari-bzero1-plain",
     "brand": "Bvlgari",
     "brandKr": "불가리",
-    "name": "비제로원 링 (옐로골드)",
+    "name": "비제로원 링(옐로골드)",
     "krPrice": 2880000,
     "jpPrice": 314600,
     "guestCardAllowed": true,
@@ -179,7 +166,7 @@ let PRESETS = [
     "id": "bvlgari-bzero1-pave",
     "brand": "Bvlgari",
     "brandKr": "불가리",
-    "name": "비제로원 1밴드 링 (화이트골드 1다이아)",
+    "name": "비제로원 1밴드 링 (화이트골드, 1다이아)",
     "krPrice": 4200000,
     "jpPrice": 432300,
     "guestCardAllowed": true,
@@ -192,7 +179,7 @@ let PRESETS = [
     "id": "bvlgari-serpenti-plain",
     "brand": "Bvlgari",
     "brandKr": "불가리",
-    "name": "세르펜티 바이퍼 링 (노다이아 로즈골드)",
+    "name": "세르펜티 바이퍼 링 (노다이아, 로즈골드)",
     "krPrice": 2450000,
     "jpPrice": 251900,
     "guestCardAllowed": true,
@@ -205,7 +192,7 @@ let PRESETS = [
     "id": "bvlgari-serpenti-dia",
     "brand": "Bvlgari",
     "brandKr": "불가리",
-    "name": "세르펜티 바이퍼 링 (로즈골드 세미파베)",
+    "name": "세르펜티 바이퍼 링 (로즈골드, 세미파베 다이아)",
     "krPrice": 7500000,
     "jpPrice": 770000,
     "guestCardAllowed": true,
@@ -270,7 +257,7 @@ let PRESETS = [
     "id": "tasaki-trapezio-plain",
     "brand": "Tasaki",
     "brandKr": "타사키",
-    "name": "트라페지오 링 (사쿠라골드 노다이아)",
+    "name": "트라페지오 링 (사쿠라골드, 노다이아)",
     "krPrice": 2130000,
     "jpPrice": 225500,
     "guestCardAllowed": true,
@@ -293,20 +280,20 @@ let PRESETS = [
     "imageUrl": "./images/rings/tasaki-trapezio-1d.svg"
   },
   {
-    "id": "tasaki-piano-dia",
+    "id": "tasaki-piano-3d",
     "brand": "Tasaki",
     "brandKr": "타사키",
-    "name": "피아노 링 (사쿠라골드 3다이아)",
+    "name": "피아노 링 (사쿠라골드, 3다이아 세팅)",
     "krPrice": 2030000,
     "jpPrice": 214500,
     "guestCardAllowed": true,
     "tag": "지점별 5% 가능",
     "krUrl": "https://www.tasaki.co.kr/piano-3-stones-20-ring-rd-f2696-18ksg.html",
     "jpUrl": "https://www.tasaki.co.jp/piano-3-stones-20-ring-rd-f2696-18ksg.html",
-    "imageUrl": "./images/rings/tasaki-piano-dia.svg"
+    "imageUrl": "./images/rings/tasaki-piano-3d.svg"
   },
   {
-    "id": "boucheron-quatre-jrg03330",
+    "id": "boucheron-quatre-classic-xs",
     "brand": "Boucheron",
     "brandKr": "부쉐론",
     "name": "콰트로 클래식 XS (JRG03330)",
@@ -316,10 +303,10 @@ let PRESETS = [
     "tag": "지점별 5% 가능",
     "krUrl": "https://www.boucheron.com/ko/quatre-classique-xs-ring-jrg03330.html",
     "jpUrl": "https://www.boucheron.com/ja_en/quatre-classique-xs-ring-jrg03330.html",
-    "imageUrl": "./images/rings/boucheron-quatre-jrg03330.svg"
+    "imageUrl": "./images/rings/boucheron-quatre-classic-xs.svg"
   },
   {
-    "id": "boucheron-quatre-jrg03511",
+    "id": "boucheron-quatre-black-xs",
     "brand": "Boucheron",
     "brandKr": "부쉐론",
     "name": "콰트로 클래식 블랙 에디션 XS (JRG03511)",
@@ -329,10 +316,10 @@ let PRESETS = [
     "tag": "지점별 5% 가능",
     "krUrl": "https://www.boucheron.com/ko/quatre-black-edition-xs-ring-jrg03511.html",
     "jpUrl": "https://www.boucheron.com/ja_en/quatre-black-edition-xs-ring-jrg03511.html",
-    "imageUrl": "./images/rings/boucheron-quatre-jrg03511.svg"
+    "imageUrl": "./images/rings/boucheron-quatre-black-xs.svg"
   },
   {
-    "id": "boucheron-quatre-jal00300",
+    "id": "boucheron-quatre-white-band",
     "brand": "Boucheron",
     "brandKr": "부쉐론",
     "name": "콰트로 더블 화이트 에디션 밴드 (JAL00300)",
@@ -342,7 +329,7 @@ let PRESETS = [
     "tag": "지점별 5% 가능",
     "krUrl": "https://www.boucheron.com/ko/quatre-double-white-edition-wedding-band-jal00300.html",
     "jpUrl": "https://www.boucheron.com/ja_en/quatre-double-white-edition-wedding-band-jal00300.html",
-    "imageUrl": "./images/rings/boucheron-quatre-jal00300.svg"
+    "imageUrl": "./images/rings/boucheron-quatre-white-band.svg"
   },
   {
     "id": "chaumet-torsade-1d",
@@ -355,7 +342,7 @@ let PRESETS = [
     "tag": "지점별 5% 가능",
     "krUrl": "https://www.chaumet.com/kr_kr/torsade-de-chaumet-ring-082721",
     "jpUrl": "https://www.chaumet.com/jp_ja/torsade-de-chaumet-ring-082721",
-    "imageUrl": "./images/rings/chaumet-torsade-1d.svg"
+    "imageUrl": "./images/rings/chaumet-torsade-1d.png"
   },
   {
     "id": "chaumet-torsade-pave",
@@ -368,10 +355,10 @@ let PRESETS = [
     "tag": "지점별 5% 가능",
     "krUrl": "https://www.chaumet.com/kr_kr/torsade-de-chaumet-ring-095904",
     "jpUrl": "https://www.chaumet.com/jp_ja/torsade-de-chaumet-ring-095904",
-    "imageUrl": "./images/rings/chaumet-torsade-pave.svg"
+    "imageUrl": "./images/rings/chaumet-torsade-pave.png"
   },
   {
-    "id": "chaumet-torsade-pt",
+    "id": "chaumet-torsade-plain",
     "brand": "Chaumet",
     "brandKr": "쇼메",
     "name": "토르사드 드 쇼메 (플래티넘 노다이아)",
@@ -381,46 +368,33 @@ let PRESETS = [
     "tag": "지점별 5% 가능",
     "krUrl": "https://www.chaumet.com/kr_kr/torsade-de-chaumet-ring-095902",
     "jpUrl": "https://www.chaumet.com/jp_ja/torsade-de-chaumet-ring-095902",
-    "imageUrl": "./images/rings/chaumet-torsade-pt.svg"
+    "imageUrl": "./images/rings/chaumet-torsade-plain.svg"
   },
   {
-    "id": "chaumet-liens",
+    "id": "chaumet-liens-4mm",
     "brand": "Chaumet",
     "brandKr": "쇼메",
-    "name": "리앙 에비당스 링 (노다이아 4mm)",
+    "name": "리앙 에비당스 링 (노다이아, 4mm)",
     "krPrice": 3480000,
     "jpPrice": 358600,
     "guestCardAllowed": true,
     "tag": "지점별 5% 가능",
     "krUrl": "https://www.chaumet.com/kr_kr/liens-evidence-ring-080224",
     "jpUrl": "https://www.chaumet.com/jp_ja/liens-evidence-ring-080224",
-    "imageUrl": "./images/rings/chaumet-liens.svg"
-  },
-  {
-    "id": "chaumet-liens-dia",
-    "brand": "Chaumet",
-    "brandKr": "쇼메",
-    "name": "리앙 에비당스 링 (중간 다이아몬드)",
-    "krPrice": 5040000,
-    "jpPrice": 519200,
-    "guestCardAllowed": true,
-    "tag": "지점별 5% 가능",
-    "krUrl": "https://www.chaumet.com/kr_kr/liens-evidence-ring-081685",
-    "jpUrl": "https://www.chaumet.com/jp_ja/liens-evidence-ring-081685",
-    "imageUrl": "./images/rings/chaumet-liens-dia.svg"
+    "imageUrl": "./images/rings/chaumet-liens-4mm.svg"
   },
   {
     "id": "chaumet-triomphe-sm",
     "brand": "Chaumet",
     "brandKr": "쇼메",
-    "name": "트리옹프 드 쇼메 (플래티넘 3.5mm 노다이아)",
+    "name": "트리옹프 드 쇼메 (플래티넘, 3.5m, 노다이아)",
     "krPrice": 4320000,
     "jpPrice": 444400,
     "guestCardAllowed": true,
     "tag": "지점별 5% 가능",
     "krUrl": "https://www.chaumet.com/kr_kr/triomphe-de-chaumet-ring-082795",
     "jpUrl": "https://www.chaumet.com/jp_ja/triomphe-de-chaumet-ring-082795",
-    "imageUrl": "./images/rings/chaumet-triomphe-sm.svg"
+    "imageUrl": "./images/rings/chaumet-triomphe-sm.png"
   },
   {
     "id": "chaumet-triomphe-pave",
@@ -433,7 +407,7 @@ let PRESETS = [
     "tag": "지점별 5% 가능",
     "krUrl": "https://www.chaumet.com/kr_kr/triomphe-de-chaumet-ring-082640",
     "jpUrl": "https://www.chaumet.com/jp_ja/jewellery/rings",
-    "imageUrl": "./images/rings/chaumet-triomphe-pave.svg"
+    "imageUrl": "./images/rings/chaumet-triomphe-pave.png"
   }
 ];
 
