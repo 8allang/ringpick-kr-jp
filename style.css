@@ -633,6 +633,22 @@ body.light-theme .preset-img-box {
   gap: 8px;
 }
 
+.country-badge .flag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.svg-flag {
+  width: 24px;
+  height: 16px;
+  display: inline-block;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
 .country-badge.jp { color: #FCA5A5; }
 .country-badge.kr { color: #93C5FD; }
 
