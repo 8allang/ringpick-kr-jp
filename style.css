@@ -2240,13 +2240,17 @@ body.light-theme .quick-url-link.jp {
 /* ===================================================================
    Responsive Media Queries
    =================================================================== */
+/* ===================================================================
+   Mobile Optimized Responsive Styles
+   =================================================================== */
 @media (max-width: 900px) {
   .main-calculator-grid,
   .receipts-grid,
   .rate-inputs-grid,
   .guide-cards-grid,
   .log-stats-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+    gap: 16px;
   }
 
   .log-row-card {
@@ -2255,15 +2259,15 @@ body.light-theme .quick-url-link.jp {
   }
 
   .title {
-    font-size: 1.85rem;
+    font-size: 1.75rem;
   }
 
   .diff-amount {
-    font-size: 2.2rem;
+    font-size: 2.1rem;
   }
 
   .app-container {
-    padding: 20px 14px 60px;
+    padding: 20px 14px 90px;
   }
 
   .quick-controls-bar {
@@ -2272,21 +2276,33 @@ body.light-theme .quick-url-link.jp {
   }
 }
 
-@media (max-width: 700px) {
-  .quick-summary-table th.th-action,
-  .quick-summary-table td.td-action {
-    display: none;
+@media (max-width: 768px) {
+  .app-container {
+    padding: 16px 12px 90px;
   }
-}
 
-@media (max-width: 600px) {
+  .calc-card {
+    padding: 20px 16px;
+    border-radius: var(--radius-lg);
+  }
+
+  .luxury-input {
+    font-size: 1.25rem;
+    padding: 12px 14px 12px 38px;
+  }
+
+  .input-prefix {
+    font-size: 1.15rem;
+    left: 14px;
+  }
+
   .preset-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
   }
 
   .preset-card {
-    padding: 10px;
+    padding: 12px 10px;
     min-height: 220px;
   }
 
@@ -2294,22 +2310,136 @@ body.light-theme .quick-url-link.jp {
     height: 80px;
   }
 
-  .log-stats-grid {
-    grid-template-columns: 1fr;
+  .preset-name {
+    font-size: 0.88rem;
   }
 
-  .quick-summary-btn span:not(.btn-icon) {
+  .preset-prices {
+    font-size: 0.76rem;
+  }
+
+  /* Quick Summary Table Mobile Cards Transformation */
+  .quick-summary-table thead {
     display: none;
   }
 
-  .quick-summary-table th, 
+  .quick-summary-table, 
+  .quick-summary-table tbody, 
+  .quick-summary-table tr, 
   .quick-summary-table td {
-    padding: 8px 8px;
+    display: block;
+    width: 100%;
   }
 
-  .quick-url-link {
-    padding: 4px 6px;
-    font-size: 0.74rem;
+  .quick-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    margin-bottom: 10px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    gap: 8px;
+  }
+
+  .quick-summary-table td {
+    padding: 0;
+    border: none;
+  }
+
+  .quick-summary-table td.td-img {
+    width: 44px;
+    height: 44px;
+  }
+
+  .quick-summary-table td.td-brand {
+    flex: 0 0 auto;
+  }
+
+  .quick-summary-table td.td-name {
+    width: 100%;
+    order: 3;
+    margin-top: 4px;
+  }
+
+  .quick-summary-table td.td-url {
+    order: 4;
+    display: inline-flex;
+    margin-right: 6px;
+  }
+
+  .quick-summary-table td.td-action {
+    order: 2;
+    margin-left: auto;
+  }
+
+  .quick-select-btn {
+    padding: 5px 10px;
+    font-size: 0.76rem;
+  }
+
+  /* Sticky Bottom Action Bar on Mobile */
+  .action-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--bg-card);
+    backdrop-filter: blur(16px);
+    border-top: 1px solid var(--border-color);
+    padding: 10px 14px;
+    z-index: 999;
+    margin: 0;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.4);
+    display: flex;
+    gap: 8px;
+  }
+
+  .action-btn {
+    flex: 1;
+    font-size: 0.82rem;
+    padding: 10px 8px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .preset-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .preset-card {
+    padding: 10px 8px;
+    min-height: 200px;
+  }
+
+  .preset-img-box {
+    height: 72px;
+  }
+
+  .preset-brand {
+    font-size: 0.7rem;
+  }
+
+  .preset-name {
+    font-size: 0.82rem;
+  }
+
+  .brand-badge {
+    font-size: 0.72rem;
+    letter-spacing: 2px;
+    padding: 4px 12px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .diff-amount {
+    font-size: 1.8rem;
   }
 }
 
