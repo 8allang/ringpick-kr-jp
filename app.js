@@ -1164,7 +1164,7 @@ function calculateAndRender() {
   // Render Japan Detailed Receipt
   let jpLinesHTML = `
     <div class="receipt-line">
-      <span class="r-label">일본 정가 (${data.multiplier === 2 ? '2인 페어링' : '1인'})</span>
+      <span class="r-label">일본 정가 (${data.multiplier === 2 ? '2인' : '1인'})</span>
       <span class="r-val">${formatJPY(data.baseJp)}</span>
     </div>
   `;
@@ -1245,7 +1245,7 @@ function calculateAndRender() {
   // Render Korea Detailed Receipt
   let krLinesHTML = `
     <div class="receipt-line">
-      <span class="r-label">한국 정가 (${data.multiplier === 2 ? '2인 페어링' : '1인'})</span>
+      <span class="r-label">한국 정가 (${data.multiplier === 2 ? '2인' : '1인'})</span>
       <span class="r-val">${formatKRW(data.baseKr)}</span>
     </div>
   `;
@@ -1576,7 +1576,7 @@ function setupEventListeners() {
   
   dom.copyResultBtn.addEventListener('click', () => {
     const data = calculatePrices();
-    const modeStr = data.multiplier === 2 ? '2인 커플 (웨딩페어)' : '1인 싱글';
+    const modeStr = data.multiplier === 2 ? '2인' : '1인';
     
     let summaryText = `💍 [웨딩밴드 한일 가격비교 결과]\n`;
     summaryText += `구분: ${modeStr}\n`;
