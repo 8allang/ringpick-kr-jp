@@ -57,9 +57,7 @@ def get_guest_card(brand_en):
     return True, "지점별 5% 가능"
 
 filtered_rings = []
-seen_ids = set()
 
-# Mapping to canonical IDs where possible
 ID_MAP = {
     "러브 웨딩 밴드 (SM 3.6mm)": "cartier-love-sm",
     "러브 웨딩 밴드 (1다이아 4mm 0.02ct)": "cartier-love-1d",
@@ -90,6 +88,7 @@ ID_MAP = {
     "토르사드 드 쇼메 (플래티넘 풀 파베)": "chaumet-torsade-pave",
     "토르사드 드 쇼메 (플래티넘 노다이아)": "chaumet-torsade-plain",
     "리앙 에비당스 링 (노다이아, 4mm)": "chaumet-liens-4mm",
+    "리앙 에비당스 링 (중간 다이아몬드)": "chaumet-liens-dia",
     "트리옹프 드 쇼메 (플래티넘, 3.5m, 노다이아)": "chaumet-triomphe-sm",
     "트리옹프 드 쇼메 (풀 파베 다이아)": "chaumet-triomphe-pave",
 }
@@ -111,9 +110,9 @@ for line in lines:
     kr_url = cols[9] if len(cols) > 9 else ""
     jp_url = cols[10] if len(cols) > 10 else ""
     
-    # INCLUDE ONLY IF flag1 is TRUE and flag2 is TRUE (or flag1 is TRUE)
-    if flag1 != "TRUE" or flag2 != "TRUE":
-        print(f"EXCLUDING (FALSE): No {num_str} - {brand_raw} {model_name}")
+    # Exclude ONLY if BOTH flag1 and flag2 are FALSE (i.e. No 33 & No 34)
+    if flag1 == "FALSE" and flag2 == "FALSE":
+        print(f"EXCLUDING (BOTH FALSE): No {num_str} - {brand_raw} {model_name}")
         continue
         
     kr_price = int(re.sub(r'[^0-9]', '', kr_price_raw))
@@ -166,7 +165,6 @@ print("Brand counts:", brand_counts)
 # Save data/rings.json
 DATA_PATH = os.path.join(os.path.dirname(__file__), "..", "data", "rings.json")
 APP_PATH = os.path.join(os.path.dirname(__file__), "..", "app.js")
-INDEX_PATH = os.path.join(os.path.dirname(__file__), "..", "index.html")
 
 data = {
     "lastUpdated": "2026-09-08",
