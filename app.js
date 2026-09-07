@@ -810,38 +810,95 @@ function renderQuickSummary() {
   });
 }
 
-// --- Live Currency Fetcher ---
-async function fetchLiveExchangeRates() {
-  dom.rateTimestamp.textContent = '최신 환율 조회 중...';
-  try {
-    const res = await fetch('https://open.er-api.com/v6/latest/USD');
-    if (!res.ok) throw new Error('API response failed');
-    const data = await res.json();
-    
-    if (data && data.rates) {
-      const usdKrw = data.rates.KRW;
-      const usdJpy = data.rates.JPY;
-      
-      if (usdKrw && usdJpy) {
-        const jpy100Krw = (usdKrw / usdJpy) * 100;
-        
-        state.usdKrwRate = Math.round(usdKrw * 10) / 10;
-        state.usdJpyRate = Math.round(usdJpy * 10) / 10;
-        state.jpyKrwRate = Math.round(jpy100Krw * 10) / 10;
-        
+// --- Live Currency Fetcher (1시간 단위 자동 연동) ---
+const EX_RATE_CACHE_KEY = 'wedding_ring_ex_rates_v1';
+const ONE_HOUR_MS = 60 * 60 * 1000; // 1시간 (3,600,000ms)
+
+async function fetchLiveExchangeRates(forceRefresh = false) {
+  if (dom.rateTimestamp) dom.rateTimestamp.textContent = '실시간 환율 갱신 중...';
+
+  const cached = localStorage.getItem(EX_RATE_CACHE_KEY);
+  const nowMs = Date.now();
+
+  if (!forceRefresh && cached) {
+    try {
+      const parsed = JSON.parse(cached);
+      if (parsed && parsed.timestamp && (nowMs - parsed.timestamp < ONE_HOUR_MS)) {
+        state.usdKrwRate = parsed.usdKrw;
+        state.usdJpyRate = parsed.usdJpy;
+        state.jpyKrwRate = parsed.jpyKrw;
+
         dom.usdKrwRate.value = state.usdKrwRate;
         dom.usdJpyRate.value = state.usdJpyRate;
         dom.jpyKrwRate.value = state.jpyKrwRate;
-        
-        const now = new Date();
-        dom.rateTimestamp.textContent = `실시간 연동 완료 (${now.getHours()}:${String(now.getMinutes()).padStart(2, '0')})`;
+
+        const dateObj = new Date(parsed.timestamp);
+        const timeStr = `${String(dateObj.getHours()).padStart(2, '0')}:${String(dateObj.getMinutes()).padStart(2, '0')}`;
+        if (dom.rateTimestamp) dom.rateTimestamp.textContent = `🟢 1시간 단위 연동 중 (최근 갱신: ${timeStr})`;
         calculateAndRender();
         return;
       }
+    } catch (e) {
+      console.warn('Invalid cached exchange rate, refetching...');
+    }
+  }
+
+  let rates = null;
+  // Primary API: open.er-api.com (hourly update)
+  try {
+    const res = await fetch('https://open.er-api.com/v6/latest/USD');
+    if (res.ok) {
+      const data = await res.json();
+      if (data && data.rates && data.rates.KRW && data.rates.JPY) {
+        rates = { krw: data.rates.KRW, jpy: data.rates.JPY };
+      }
     }
   } catch (err) {
-    console.warn('Currency fetch failed, using fallback defaults:', err);
-    dom.rateTimestamp.textContent = '기본 환율 적용 중';
+    console.warn('Primary exchange API failed, trying fallback...', err);
+  }
+
+  // Fallback API: exchangerate-api.com
+  if (!rates) {
+    try {
+      const res = await fetch('https://api.exchangerate-api.com/v4/latest/USD');
+      if (res.ok) {
+        const data = await res.json();
+        if (data && data.rates && data.rates.KRW && data.rates.JPY) {
+          rates = { krw: data.rates.KRW, jpy: data.rates.JPY };
+        }
+      }
+    } catch (err) {
+      console.warn('Fallback exchange API failed:', err);
+    }
+  }
+
+  if (rates) {
+    const usdKrw = rates.krw;
+    const usdJpy = rates.jpy;
+    const jpy100Krw = (usdKrw / usdJpy) * 100;
+
+    state.usdKrwRate = Math.round(usdKrw * 10) / 10;
+    state.usdJpyRate = Math.round(usdJpy * 10) / 10;
+    state.jpyKrwRate = Math.round(jpy100Krw * 10) / 10;
+
+    dom.usdKrwRate.value = state.usdKrwRate;
+    dom.usdJpyRate.value = state.usdJpyRate;
+    dom.jpyKrwRate.value = state.jpyKrwRate;
+
+    const cacheData = {
+      timestamp: nowMs,
+      usdKrw: state.usdKrwRate,
+      usdJpy: state.usdJpyRate,
+      jpyKrw: state.jpyKrwRate
+    };
+    localStorage.setItem(EX_RATE_CACHE_KEY, JSON.stringify(cacheData));
+
+    const dateObj = new Date(nowMs);
+    const timeStr = `${String(dateObj.getHours()).padStart(2, '0')}:${String(dateObj.getMinutes()).padStart(2, '0')}`;
+    if (dom.rateTimestamp) dom.rateTimestamp.textContent = `🟢 1시간 단위 연동 완료 (${timeStr})`;
+    calculateAndRender();
+  } else {
+    if (dom.rateTimestamp) dom.rateTimestamp.textContent = '기본 환율 적용 중';
   }
 }
 
@@ -1766,7 +1823,7 @@ function setupEventListeners() {
   });
   
   dom.refreshRateBtn.addEventListener('click', () => {
-    fetchLiveExchangeRates();
+    fetchLiveExchangeRates(true);
   });
   
   dom.copyResultBtn.addEventListener('click', () => {
@@ -1817,6 +1874,12 @@ document.addEventListener('DOMContentLoaded', async () => {
   
   calculateAndRender();
   fetchLiveExchangeRates();
+
+  // 1시간(3,600,000ms) 단위 자동 환율 갱신 타이머 등록
+  setInterval(() => {
+    fetchLiveExchangeRates(true);
+  }, ONE_HOUR_MS);
+
   await loadExternalRingsData();
   await loadCrawlLog();
 });
