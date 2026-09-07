@@ -844,12 +844,54 @@ async function fetchLiveExchangeRates() {
   }
 }
 
-// --- Render Presets with Brand Filtering ---
+// Helper: Randomly sample 2 items per brand for top featured view
+let shuffledPresetsAll = null;
+
+function getShuffledPresetsByBrand() {
+  if (shuffledPresetsAll) return shuffledPresetsAll;
+
+  const brandGroups = {};
+  PRESETS.forEach(item => {
+    const b = item.brand;
+    if (!brandGroups[b]) brandGroups[b] = [];
+    brandGroups[b].push(item);
+  });
+
+  const featuredList = [];
+  const remainingList = [];
+
+  Object.keys(brandGroups).forEach(b => {
+    const items = [...brandGroups[b]];
+    // Fisher-Yates shuffle per brand
+    for (let i = items.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [items[i], items[j]] = [items[j], items[i]];
+    }
+    const picked = items.slice(0, 2);
+    const rest = items.slice(2);
+    featuredList.push(...picked);
+    remainingList.push(...rest);
+  });
+
+  // Intermix featured items across brands
+  for (let i = featuredList.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [featuredList[i], featuredList[j]] = [featuredList[j], featuredList[i]];
+  }
+
+  shuffledPresetsAll = [...featuredList, ...remainingList];
+  return shuffledPresetsAll;
+}
+
 // --- Render Presets with Brand Filtering & Search ---
 function renderPresets() {
   dom.presetGrid.innerHTML = '';
   
-  let filtered = PRESETS.filter(item => {
+  let sourceList = (state.activeBrandFilter === 'all' && !state.presetSearchQuery)
+    ? getShuffledPresetsByBrand()
+    : PRESETS;
+
+  let filtered = sourceList.filter(item => {
     if (state.activeBrandFilter !== 'all' && item.brand !== state.activeBrandFilter) {
       return false;
     }
@@ -863,30 +905,31 @@ function renderPresets() {
     return true;
   });
 
-  const isAllView = state.activeBrandFilter === 'all' && !state.presetSearchQuery;
-  const INITIAL_LIMIT = 12;
-
-  if (isAllView && !state.isPresetExpanded) {
-    filtered = filtered.slice(0, INITIAL_LIMIT);
+  const totalFilteredCount = filtered.length;
+  if (!state.visiblePresetLimit) {
+    state.visiblePresetLimit = 12;
   }
+
+  const isLimited = state.visiblePresetLimit < totalFilteredCount;
+  const visibleItems = isLimited ? filtered.slice(0, state.visiblePresetLimit) : filtered;
 
   // Toggle expand button visibility
   if (dom.presetExpandWrap) {
-    if (isAllView) {
+    if (totalFilteredCount > 12) {
       dom.presetExpandWrap.style.display = 'flex';
-      if (state.isPresetExpanded) {
-        if (dom.expandBtnText) dom.expandBtnText.textContent = '▲ 접기 (기본 12개 보기)';
-        if (dom.expandBtnIcon) dom.expandBtnIcon.textContent = '▲';
-      } else {
-        if (dom.expandBtnText) dom.expandBtnText.textContent = `✨ 전체 ${PRESETS.length}개 웨딩밴드 모두보기`;
+      if (isLimited) {
+        if (dom.expandBtnText) dom.expandBtnText.textContent = `✨ 웨딩밴드 더보기 (${visibleItems.length} / ${totalFilteredCount})`;
         if (dom.expandBtnIcon) dom.expandBtnIcon.textContent = '▼';
+      } else {
+        if (dom.expandBtnText) dom.expandBtnText.textContent = '▲ 접기 (기본 12개만 보기)';
+        if (dom.expandBtnIcon) dom.expandBtnIcon.textContent = '▲';
       }
     } else {
       dom.presetExpandWrap.style.display = 'none';
     }
   }
 
-  if (filtered.length === 0) {
+  if (visibleItems.length === 0) {
     dom.presetGrid.innerHTML = `
       <div style="grid-column: 1 / -1; text-align: center; padding: 40px; color: var(--text-muted); font-size: 0.95rem;">
         🔍 일치하는 웨딩밴드가 없습니다. 검색어나 브랜드 필터를 변경해 보세요.
@@ -895,7 +938,7 @@ function renderPresets() {
     return;
   }
 
-  filtered.forEach(item => {
+  visibleItems.forEach(item => {
     const card = document.createElement('div');
     card.className = `preset-card ${state.activePresetId === item.id ? 'active' : ''}`;
     card.dataset.id = item.id;
@@ -905,10 +948,10 @@ function renderPresets() {
     const imgHtml = `<div class="preset-img-box"><img src="${imgSrc}" alt="${item.name}" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='./images/rings/${item.id}.svg';" /></div>`;
     
     const krLinkHtml = item.krUrl 
-      ? `<a href="${item.krUrl}" target="_blank" rel="noopener noreferrer" class="preset-icon-link kr" title="🇰🇷 한국 공식몰 웨딩링 컬렉션 바로가기" onclick="event.stopPropagation()">🇰🇷 웨딩링</a>`
+      ? `<a href="${item.krUrl}" target="_blank" rel="noopener noreferrer" class="preset-icon-link kr" title="🇰🇷 한국 공식몰 바로가기" onclick="event.stopPropagation()">🇰🇷 공홈</a>`
       : '';
     const jpLinkHtml = item.jpUrl 
-      ? `<a href="${item.jpUrl}" target="_blank" rel="noopener noreferrer" class="preset-icon-link jp" title="🇯🇵 일본 공식몰 웨딩링 컬렉션 바로가기" onclick="event.stopPropagation()">🇯🇵 웨딩링</a>`
+      ? `<a href="${item.jpUrl}" target="_blank" rel="noopener noreferrer" class="preset-icon-link jp" title="🇯🇵 일본 공식몰 바로가기" onclick="event.stopPropagation()">🇯🇵 공홈</a>`
       : '';
 
     card.innerHTML = `
@@ -1371,7 +1414,15 @@ function setupEventListeners() {
 
   if (dom.toggleExpandPresetBtn) {
     dom.toggleExpandPresetBtn.addEventListener('click', () => {
-      state.isPresetExpanded = !state.isPresetExpanded;
+      let sourceList = (state.activeBrandFilter === 'all' && !state.presetSearchQuery)
+        ? getShuffledPresetsByBrand()
+        : PRESETS.filter(p => state.activeBrandFilter === 'all' || p.brand === state.activeBrandFilter);
+
+      if (state.visiblePresetLimit >= sourceList.length) {
+        state.visiblePresetLimit = 12; // Collapse back to initial 12 (6 rows)
+      } else {
+        state.visiblePresetLimit += 12; // Load 12 more (6 rows)
+      }
       renderPresets();
     });
   }
@@ -1383,6 +1434,7 @@ function setupEventListeners() {
         dom.brandFilterBar.querySelectorAll('.brand-tab').forEach(t => t.classList.remove('active'));
         tab.classList.add('active');
         state.activeBrandFilter = tab.dataset.brand;
+        state.visiblePresetLimit = 12; // Reset count on tab change
         renderPresets();
       });
     });
