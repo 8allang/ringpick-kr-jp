@@ -355,7 +355,7 @@ let PRESETS = [
     "tag": "지점별 5% 가능",
     "krUrl": "https://www.chaumet.com/kr_kr/torsade-de-chaumet-ring-082721",
     "jpUrl": "https://www.chaumet.com/jp_ja/torsade-de-chaumet-ring-082721",
-    "imageUrl": "./images/rings/chaumet-torsade-1d.png"
+    "imageUrl": "./images/rings/chaumet-torsade-1d.svg"
   },
   {
     "id": "chaumet-torsade-pave",
@@ -368,7 +368,7 @@ let PRESETS = [
     "tag": "지점별 5% 가능",
     "krUrl": "https://www.chaumet.com/kr_kr/torsade-de-chaumet-ring-095904",
     "jpUrl": "https://www.chaumet.com/jp_ja/torsade-de-chaumet-ring-095904",
-    "imageUrl": "./images/rings/chaumet-torsade-pave.png"
+    "imageUrl": "./images/rings/chaumet-torsade-pave.svg"
   },
   {
     "id": "chaumet-torsade-pt",
@@ -381,7 +381,7 @@ let PRESETS = [
     "tag": "지점별 5% 가능",
     "krUrl": "https://www.chaumet.com/kr_kr/torsade-de-chaumet-ring-095902",
     "jpUrl": "https://www.chaumet.com/jp_ja/torsade-de-chaumet-ring-095902",
-    "imageUrl": "./images/rings/chaumet-torsade-pt.png"
+    "imageUrl": "./images/rings/chaumet-torsade-pt.svg"
   },
   {
     "id": "chaumet-liens",
@@ -394,7 +394,7 @@ let PRESETS = [
     "tag": "지점별 5% 가능",
     "krUrl": "https://www.chaumet.com/kr_kr/liens-evidence-ring-080224",
     "jpUrl": "https://www.chaumet.com/jp_ja/liens-evidence-ring-080224",
-    "imageUrl": "./images/rings/chaumet-liens.png"
+    "imageUrl": "./images/rings/chaumet-liens.svg"
   },
   {
     "id": "chaumet-liens-dia",
@@ -407,7 +407,7 @@ let PRESETS = [
     "tag": "지점별 5% 가능",
     "krUrl": "https://www.chaumet.com/kr_kr/liens-evidence-ring-081685",
     "jpUrl": "https://www.chaumet.com/jp_ja/liens-evidence-ring-081685",
-    "imageUrl": "./images/rings/chaumet-liens-dia.png"
+    "imageUrl": "./images/rings/chaumet-liens-dia.svg"
   },
   {
     "id": "chaumet-triomphe-sm",
@@ -420,7 +420,7 @@ let PRESETS = [
     "tag": "지점별 5% 가능",
     "krUrl": "https://www.chaumet.com/kr_kr/triomphe-de-chaumet-ring-082795",
     "jpUrl": "https://www.chaumet.com/jp_ja/triomphe-de-chaumet-ring-082795",
-    "imageUrl": "./images/rings/chaumet-triomphe-sm.png"
+    "imageUrl": "./images/rings/chaumet-triomphe-sm.svg"
   },
   {
     "id": "chaumet-triomphe-pave",
@@ -433,7 +433,7 @@ let PRESETS = [
     "tag": "지점별 5% 가능",
     "krUrl": "https://www.chaumet.com/kr_kr/triomphe-de-chaumet-ring-082640",
     "jpUrl": "https://www.chaumet.com/jp_ja/jewellery/rings",
-    "imageUrl": "./images/rings/chaumet-triomphe-pave.png"
+    "imageUrl": "./images/rings/chaumet-triomphe-pave.svg"
   }
 ];
 
