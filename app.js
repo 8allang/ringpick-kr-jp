@@ -667,6 +667,10 @@ let state = {
   activeBrandFilter: 'all',
   activePresetId: null,
   
+  // Preset State & Expand
+  presetSearchQuery: '',
+  isPresetExpanded: false,
+  
   // Inputs
   jpPrice: 193600,
   krPrice: 2050000,
@@ -695,6 +699,12 @@ const dom = {
   themeToggleBtn: document.getElementById('themeToggleBtn'),
   brandFilterBar: document.getElementById('brandFilterBar'),
   presetGrid: document.getElementById('presetGrid'),
+  presetSearchInput: document.getElementById('presetSearchInput'),
+  clearPresetSearchBtn: document.getElementById('clearPresetSearchBtn'),
+  presetExpandWrap: document.getElementById('presetExpandWrap'),
+  toggleExpandPresetBtn: document.getElementById('toggleExpandPresetBtn'),
+  expandBtnText: document.getElementById('expandBtnText'),
+  expandBtnIcon: document.getElementById('expandBtnIcon'),
   
   jpPrice: document.getElementById('jpPrice'),
   krPrice: document.getElementById('krPrice'),
@@ -1057,13 +1067,55 @@ async function fetchLiveExchangeRates() {
 }
 
 // --- Render Presets with Brand Filtering ---
+// --- Render Presets with Brand Filtering & Search ---
 function renderPresets() {
   dom.presetGrid.innerHTML = '';
   
-  const filtered = PRESETS.filter(item => {
-    if (state.activeBrandFilter === 'all') return true;
-    return item.brand === state.activeBrandFilter;
+  let filtered = PRESETS.filter(item => {
+    if (state.activeBrandFilter !== 'all' && item.brand !== state.activeBrandFilter) {
+      return false;
+    }
+    const query = state.presetSearchQuery.toLowerCase().trim();
+    if (query) {
+      const name = (item.name || '').toLowerCase();
+      const brand = (item.brand || '').toLowerCase();
+      const brandKr = (item.brandKr || '').toLowerCase();
+      return name.includes(query) || brand.includes(query) || brandKr.includes(query);
+    }
+    return true;
   });
+
+  const isAllView = state.activeBrandFilter === 'all' && !state.presetSearchQuery;
+  const INITIAL_LIMIT = 12;
+
+  if (isAllView && !state.isPresetExpanded) {
+    filtered = filtered.slice(0, INITIAL_LIMIT);
+  }
+
+  // Toggle expand button visibility
+  if (dom.presetExpandWrap) {
+    if (isAllView) {
+      dom.presetExpandWrap.style.display = 'flex';
+      if (state.isPresetExpanded) {
+        if (dom.expandBtnText) dom.expandBtnText.textContent = '▲ 접기 (기본 12개 보기)';
+        if (dom.expandBtnIcon) dom.expandBtnIcon.textContent = '▲';
+      } else {
+        if (dom.expandBtnText) dom.expandBtnText.textContent = `✨ 전체 ${PRESETS.length}개 웨딩밴드 모두보기`;
+        if (dom.expandBtnIcon) dom.expandBtnIcon.textContent = '▼';
+      }
+    } else {
+      dom.presetExpandWrap.style.display = 'none';
+    }
+  }
+
+  if (filtered.length === 0) {
+    dom.presetGrid.innerHTML = `
+      <div style="grid-column: 1 / -1; text-align: center; padding: 40px; color: var(--text-muted); font-size: 0.95rem;">
+        🔍 일치하는 웨딩밴드가 없습니다. 검색어나 브랜드 필터를 변경해 보세요.
+      </div>
+    `;
+    return;
+  }
 
   filtered.forEach(item => {
     const card = document.createElement('div');
@@ -1082,12 +1134,14 @@ function renderPresets() {
       : '';
 
     card.innerHTML = `
-      ${imgHtml}
-      <div class="preset-brand">${item.brand}</div>
-      <div class="preset-name" title="${item.name}">${item.name}</div>
-      <div class="preset-prices">
-        <span>🇯🇵 ¥${item.jpPrice.toLocaleString()}</span>
-        <span>🇰🇷 ₩${item.krPrice.toLocaleString()}</span>
+      <div>
+        ${imgHtml}
+        <div class="preset-brand" style="margin-top: 8px;">${item.brand}</div>
+        <div class="preset-name" title="${item.name}">${item.name}</div>
+        <div class="preset-prices">
+          <span>🇯🇵 ¥${item.jpPrice.toLocaleString()}</span>
+          <span>🇰🇷 ₩${item.krPrice.toLocaleString()}</span>
+        </div>
       </div>
       <div class="preset-footer-row">
         <span class="preset-badge-tag ${tagClass}">${item.tag}</span>
@@ -1499,6 +1553,36 @@ function setupEventListeners() {
   dom.singleModeBtn.addEventListener('click', () => setMode(1));
   dom.coupleModeBtn.addEventListener('click', () => setMode(2));
   
+  // Preset Search Input & Expand Toggle
+  if (dom.presetSearchInput) {
+    dom.presetSearchInput.addEventListener('input', (e) => {
+      state.presetSearchQuery = e.target.value;
+      if (dom.clearPresetSearchBtn) {
+        dom.clearPresetSearchBtn.style.display = e.target.value ? 'block' : 'none';
+      }
+      renderPresets();
+    });
+  }
+
+  if (dom.clearPresetSearchBtn) {
+    dom.clearPresetSearchBtn.addEventListener('click', () => {
+      if (dom.presetSearchInput) {
+        dom.presetSearchInput.value = '';
+        state.presetSearchQuery = '';
+        dom.clearPresetSearchBtn.style.display = 'none';
+        dom.presetSearchInput.focus();
+        renderPresets();
+      }
+    });
+  }
+
+  if (dom.toggleExpandPresetBtn) {
+    dom.toggleExpandPresetBtn.addEventListener('click', () => {
+      state.isPresetExpanded = !state.isPresetExpanded;
+      renderPresets();
+    });
+  }
+
   // Brand Filter Tabs
   if (dom.brandFilterBar) {
     dom.brandFilterBar.querySelectorAll('.brand-tab').forEach(tab => {

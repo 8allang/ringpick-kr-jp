@@ -50,23 +50,38 @@
         <span>💡 공식 정보를 기준으로 업데이트하고 있으나, 가격·환율·면세 및 할인 정책은 변경될 수 있습니다. 실제 구매 전 해당 매장에서 최종 적용 금액을 확인해 주세요.</span>
       </div>
 
-      <!-- Brand Filter Tabs -->
-      <div class="brand-filter-bar" id="brandFilterBar">
-        <button type="button" class="brand-tab active" data-brand="all">전체</button>
-        <button type="button" class="brand-tab" data-brand="Cartier">까르띠에</button>
-        <button type="button" class="brand-tab" data-brand="Tiffany & Co.">티파니</button>
-        <button type="button" class="brand-tab" data-brand="Chanel">샤넬</button>
-        <button type="button" class="brand-tab" data-brand="Bvlgari">불가리</button>
-        <button type="button" class="brand-tab" data-brand="Tasaki">타사키</button>
-        <button type="button" class="brand-tab" data-brand="Boucheron">부쉐론</button>
-        <button type="button" class="brand-tab" data-brand="Chaumet">쇼메</button>
-        <button type="button" class="brand-tab" data-brand="Graff">그라프</button>
+      <!-- Preset Controls: Search & Brand Filter Bar -->
+      <div class="preset-controls-bar">
+        <div class="preset-search-box">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="presetSearchInput" class="preset-search-input" placeholder="모델명 또는 브랜드 검색 (예: 러브링, 코코크러쉬, 콰트로, 티파니)...">
+          <button type="button" id="clearPresetSearchBtn" class="search-clear-btn" style="display:none;">✕</button>
+        </div>
+
+        <div class="brand-filter-bar" id="brandFilterBar">
+          <button type="button" class="brand-tab active" data-brand="all">전체 (50)</button>
+          <button type="button" class="brand-tab" data-brand="Cartier">까르띠에 (6)</button>
+          <button type="button" class="brand-tab" data-brand="Tiffany & Co.">티파니 (7)</button>
+          <button type="button" class="brand-tab" data-brand="Chaumet">쇼메 (11)</button>
+          <button type="button" class="brand-tab" data-brand="Bvlgari">불가리 (10)</button>
+          <button type="button" class="brand-tab" data-brand="Chanel">샤넬 (3)</button>
+          <button type="button" class="brand-tab" data-brand="Boucheron">부쉐론 (4)</button>
+          <button type="button" class="brand-tab" data-brand="Tasaki">타사키 (4)</button>
+          <button type="button" class="brand-tab" data-brand="Graff">그라프 (5)</button>
+        </div>
       </div>
 
-      <div class="preset-scroll-container">
+      <div class="preset-grid-container">
         <div class="preset-grid" id="presetGrid">
           <!-- Dynamically populated by JS -->
         </div>
+      </div>
+
+      <div class="preset-expand-wrap" id="presetExpandWrap">
+        <button type="button" class="preset-expand-btn" id="toggleExpandPresetBtn">
+          <span id="expandBtnText">✨ 전체 50개 웨딩밴드 모두보기</span>
+          <span class="arrow-icon" id="expandBtnIcon">▼</span>
+        </button>
       </div>
     </section>
 
