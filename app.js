@@ -639,7 +639,7 @@ let PRESETS = [
     "krPrice": 3300000,
     "guestCardAllowed": true,
     "tag": "지점별 5% 가능",
-    "imageUrl": "./images/rings/graff-spiral-plain.jpg",
+    "imageUrl": "./images/rings/graff-spiral-plain.svg",
     "krUrl": "https://www.graff.com/kr-ko/bridal/wedding-bands/",
     "jpUrl": "https://www.graff.com/jp-ja/bridal/wedding-bands/"
   },
