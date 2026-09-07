@@ -282,6 +282,45 @@ body.light-theme .disclaimer-banner {
   color: var(--text-secondary);
 }
 
+/* Direct Input Notice Banner */
+.direct-input-notice-banner {
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.1), rgba(16, 185, 129, 0.08));
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: var(--radius-md);
+  padding: 10px 16px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-primary);
+  font-size: 0.86rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.direct-input-notice-banner .notice-icon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.direct-input-notice-banner .notice-text {
+  line-height: 1.45;
+  word-break: keep-all;
+}
+
+.direct-input-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #38BDF8;
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-left: 6px;
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+}
+
 /* Brand Filter Bar */
 .brand-filter-bar {
   display: flex;
@@ -2603,14 +2642,172 @@ body.light-theme .footer-creator-box {
   box-shadow: 0 6px 16px rgba(220, 39, 67, 0.35);
 }
 
-.creator-btn.tips-btn {
-  background: linear-gradient(135deg, var(--gold-primary), #B48A1D);
-  color: #0F172A;
-}
-
 .creator-btn.tips-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 16px rgba(212, 175, 55, 0.35);
+}
+
+/* Top Savings Ranking Section */
+.top-savings-section {
+  margin-top: 40px;
+  margin-bottom: 32px;
+  background: var(--bg-card);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: var(--radius-lg);
+  padding: 22px;
+  box-shadow: 0 8px 32px rgba(212, 175, 55, 0.08);
+}
+
+.top-rank-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 16px;
+}
+
+@media (max-width: 768px) {
+  .top-rank-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.top-rank-card {
+  background: var(--bg-input);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-rank-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--gold-primary);
+  box-shadow: 0 12px 28px rgba(212, 175, 55, 0.2);
+}
+
+.top-rank-card.rank-1 {
+  border-color: #FCD34D;
+  background: linear-gradient(145deg, rgba(252, 211, 77, 0.12), var(--bg-input));
+}
+
+.top-rank-card.rank-2 {
+  border-color: #94A3B8;
+  background: linear-gradient(145deg, rgba(148, 163, 184, 0.1), var(--bg-input));
+}
+
+.top-rank-card.rank-3 {
+  border-color: #F97316;
+  background: linear-gradient(145deg, rgba(249, 115, 22, 0.1), var(--bg-input));
+}
+
+.rank-top-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px dashed var(--border-color);
+}
+
+.rank-medal {
+  font-size: 1.4rem;
+}
+
+.rank-title {
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: var(--gold-primary);
+}
+
+.rank-1 .rank-title { color: #FCD34D; }
+.rank-2 .rank-title { color: #CBD5E1; }
+.rank-3 .rank-title { color: #FB923C; }
+
+.rank-card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.rank-img-box {
+  width: 100%;
+  height: 90px;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.rank-img-box img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.rank-brand {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--gold-primary);
+  text-transform: uppercase;
+}
+
+.rank-ring-name {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 4px 0 10px;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  height: 2.6em;
+}
+
+.rank-price-box {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius-sm);
+  padding: 10px;
+  margin-top: auto;
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+body.light-theme .rank-price-box {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.rank-price-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+}
+
+.rank-price-row.jp .p-val {
+  color: #34D399;
+  font-weight: 700;
+}
+
+.rank-price-row.kr .p-val {
+  color: var(--text-secondary);
+  text-decoration: line-through;
+  opacity: 0.75;
+}
+
+.rank-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
 }
 
 

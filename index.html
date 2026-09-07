@@ -86,7 +86,11 @@
     </section>
 
     <!-- Main Comparison Grid -->
-    <main class="main-calculator-grid">
+    <div class="direct-input-notice-banner">
+      <span class="notice-icon">✍️</span>
+      <span class="notice-text"><b>원하는 모델의 금액을 자유롭게 직접 입력해 비교해 보세요!</b> 위 33개 프리셋에 없는 브랜드나 웨딩링도 아래 일본 엔화(¥) 및 한국 원화(₩) 정가를 직접 수정·입력할 수 있습니다.</span>
+    </div>
+    <main class="main-calculator-grid" id="mainCalculatorGrid">
       <!-- Left: Japan Input Card -->
       <div class="calc-card japan-card">
         <div class="card-header">
@@ -105,7 +109,7 @@
           <!-- Price Input -->
           <div class="form-group">
             <label for="jpPrice" class="input-label">
-              <span>일본 정가 (소비세 10% 포함)</span>
+              <span>일본 정가 (소비세 10% 포함) <span class="direct-input-badge" title="원하는 금액으로 직접 수정 가능">✍️ 직접 입력 가능</span></span>
               <span class="currency-label">JPY (¥)</span>
             </label>
             <div class="input-wrapper">
@@ -207,7 +211,7 @@
           <!-- Price Input -->
           <div class="form-group">
             <label for="krPrice" class="input-label">
-              <span>한국 정가 (부가세 10% 포함)</span>
+              <span>한국 정가 (부가세 10% 포함) <span class="direct-input-badge" title="원하는 금액으로 직접 수정 가능">✍️ 직접 입력 가능</span></span>
               <span class="currency-label">KRW (₩)</span>
             </label>
             <div class="input-wrapper">
@@ -428,6 +432,19 @@
         <span class="btn-icon">🔗</span> 이 링크 공유하기
       </button>
     </div>
+
+    <!-- Top 3 Japan Savings Ranking Section -->
+    <section class="top-savings-section" id="topSavingsSection">
+      <div class="section-title-wrap">
+        <span class="section-tag">TOP SAVINGS RANKING</span>
+        <h2 class="section-title">🏆 일본 구매 시 가장 저렴한 BEST 3 랭킹</h2>
+        <span class="preset-hint">* 환율 · 게스트카드 · 세관 관부가세 실구입가 기준 절약 1, 2, 3위</span>
+      </div>
+
+      <div class="top-rank-cards-grid" id="topRankGrid">
+        <!-- Dynamically rendered by JS -->
+      </div>
+    </section>
 
     <!-- More Wedding Recommendations Section -->
     <section class="recommendation-section">

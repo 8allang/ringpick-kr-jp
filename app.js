@@ -542,7 +542,8 @@ const dom = {
   quickSearchInput: document.getElementById('quickSearchInput'),
   clearQuickSearchBtn: document.getElementById('clearQuickSearchBtn'),
   quickBrandPills: document.getElementById('quickBrandPills'),
-  quickSummaryTableBody: document.getElementById('quickSummaryTableBody')
+  quickSummaryTableBody: document.getElementById('quickSummaryTableBody'),
+  topRankGrid: document.getElementById('topRankGrid')
 };
 
 // --- Formatting Helpers ---
@@ -1310,7 +1311,152 @@ function calculateAndRender() {
   dom.krReceiptLines.innerHTML = krLinesHTML;
   dom.krFinalTotal.textContent = formatKRW(data.totalKoreaKRW);
   
+  renderTopSavingsRanking();
   updateURLQuery();
+}
+
+// --- Top 3 Japan Savings Ranking Logic ---
+function calculatePricesForItem(item) {
+  const multiplier = state.mode;
+  const baseJp = item.jpPrice * multiplier;
+  const baseKr = item.krPrice * multiplier;
+
+  const jpyKrwRate = parseFloat(dom.jpyKrwRate.value) || 915.0;
+  const usdKrwRate = parseFloat(dom.usdKrwRate.value) || 1380.0;
+  const usdJpyRate = parseFloat(dom.usdJpyRate.value) || 150.8;
+
+  const guestDiscountRate = item.guestCardAllowed ? 0.05 : 0;
+  const jpGuestDiscountJPY = Math.floor(baseJp * guestDiscountRate);
+  const jpAfterGuestJPY = baseJp - jpGuestDiscountJPY;
+
+  const jpPreTaxJPY = jpAfterGuestJPY / 1.10;
+  let taxRefundRate = 0;
+  if (state.taxFreeType === 'dept') {
+    taxRefundRate = 0.084545;
+  } else if (state.taxFreeType === 'boutique') {
+    taxRefundRate = 0.10;
+  }
+
+  const jpTaxRefundJPY = Math.floor(jpPreTaxJPY * taxRefundRate);
+  const jpStoreNetJPY = jpAfterGuestJPY - jpTaxRefundJPY;
+
+  const cardFeePercent = parseFloat(dom.jpCardFee.value) || 0;
+  const jpCardFeeJPY = Math.floor(jpStoreNetJPY * (cardFeePercent / 100));
+  const jpTotalSpentJPY = jpStoreNetJPY + jpCardFeeJPY;
+
+  const jpPaidKRW = Math.round(jpTotalSpentJPY * (jpyKrwRate / 100));
+
+  const purchaseUSD = jpStoreNetJPY / usdJpyRate;
+  const dutyFreeAllowanceUSD = 800 * multiplier;
+  const taxableUSD = Math.max(0, purchaseUSD - dutyFreeAllowanceUSD);
+  const taxableKRW = Math.round(taxableUSD * usdKrwRate);
+
+  let finalCustomsTax = 0;
+  if (taxableKRW > 0) {
+    const duty = Math.floor(taxableKRW * 0.08);
+    const vat = Math.floor((taxableKRW + duty) * 0.10);
+    const baseCustoms = duty + vat;
+    let reduction = 0;
+    if (state.customsSelfDeclare) {
+      reduction = Math.min(Math.floor(baseCustoms * 0.30), 200000 * multiplier);
+    }
+    finalCustomsTax = Math.max(0, baseCustoms - reduction);
+  }
+
+  const totalJapanKRW = jpPaidKRW + finalCustomsTax;
+
+  let giftDiscountRate = 0;
+  if (dom.krGiftDiscount.value === 'custom') {
+    giftDiscountRate = parseFloat(dom.krCustomGift.value) || 0;
+  } else {
+    giftDiscountRate = parseFloat(dom.krGiftDiscount.value) || 0;
+  }
+
+  const krDiscountKRW = Math.round(baseKr * (giftDiscountRate / 100));
+  const totalKoreaKRW = baseKr - krDiscountKRW;
+
+  const diffKRW = totalKoreaKRW - totalJapanKRW;
+  const savePercent = totalKoreaKRW > 0 ? (diffKRW / totalKoreaKRW) * 100 : 0;
+
+  return {
+    item,
+    totalJapanKRW,
+    totalKoreaKRW,
+    diffKRW,
+    savePercent
+  };
+}
+
+function renderTopSavingsRanking() {
+  if (!dom.topRankGrid) return;
+  dom.topRankGrid.innerHTML = '';
+
+  const evaluated = PRESETS.map(item => calculatePricesForItem(item));
+  evaluated.sort((a, b) => b.diffKRW - a.diffKRW);
+
+  const top3 = evaluated.slice(0, 3);
+  const medals = [
+    { title: '🥇 1위 (최고 절약)', class: 'rank-1', medal: '🥇' },
+    { title: '🥈 2위', class: 'rank-2', medal: '🥈' },
+    { title: '🥉 3위', class: 'rank-3', medal: '🥉' }
+  ];
+
+  top3.forEach((entry, idx) => {
+    const p = entry.item;
+    const rankInfo = medals[idx];
+    const card = document.createElement('div');
+    card.className = `top-rank-card ${rankInfo.class}`;
+
+    const thumbSrc = p.imageUrl || `./images/rings/${p.id}.svg`;
+    const krLinkHtml = p.krUrl ? `<a href="${p.krUrl}" target="_blank" rel="noopener noreferrer" class="preset-icon-link kr" title="🇰🇷 한국 공식몰" onclick="event.stopPropagation()">🇰🇷 공홈</a>` : '';
+    const jpLinkHtml = p.jpUrl ? `<a href="${p.jpUrl}" target="_blank" rel="noopener noreferrer" class="preset-icon-link jp" title="🇯🇵 일본 공식몰" onclick="event.stopPropagation()">🇯🇵 공홈</a>` : '';
+
+    card.innerHTML = `
+      <div class="rank-top-badge">
+        <span class="rank-medal">${rankInfo.medal}</span>
+        <span class="rank-title">${rankInfo.title}</span>
+      </div>
+      <div class="rank-card-body">
+        <div class="rank-img-box">
+          <img src="${thumbSrc}" alt="${p.name}" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='./images/rings/${p.id}.svg';" />
+        </div>
+        <span class="rank-brand">${p.brandKr || p.brand}</span>
+        <h3 class="rank-ring-name" title="${p.name}">${p.name}</h3>
+        <div class="rank-price-box">
+          <div class="rank-price-row jp">
+            <span>🇯🇵 일본 실구매가</span>
+            <span class="p-val">${formatKRW(entry.totalJapanKRW)}</span>
+          </div>
+          <div class="rank-price-row kr">
+            <span>🇰🇷 한국 실구매가</span>
+            <span class="p-val">${formatKRW(entry.totalKoreaKRW)}</span>
+          </div>
+          <div class="rank-price-row diff" style="margin-top: 4px; padding-top: 4px; border-top: 1px dashed rgba(255,255,255,0.1); font-weight:700;">
+            <span style="color:var(--gold-primary);">💡 절약 금액</span>
+            <span style="color:#FCD34D;">${formatKRW(entry.diffKRW)} (${entry.savePercent.toFixed(1)}%↓)</span>
+          </div>
+        </div>
+        <div class="rank-footer">
+          <span class="preset-badge-tag ${p.guestCardAllowed ? 'guest-ok' : 'no-guest'}">${p.tag}</span>
+          <div class="preset-link-actions">
+            ${krLinkHtml}
+            ${jpLinkHtml}
+          </div>
+        </div>
+      </div>
+    `;
+
+    card.addEventListener('click', (e) => {
+      if (e.target.tagName && e.target.tagName.toLowerCase() === 'a') return;
+      applyPreset(p);
+      const calcGrid = document.getElementById('mainCalculatorGrid') || document.getElementById('presetGrid');
+      if (calcGrid) {
+        calcGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+
+    dom.topRankGrid.appendChild(card);
+  });
 }
 
 // --- URL State Sync & Sharing ---
