@@ -140,7 +140,7 @@ let PRESETS = [
     "id": "chanel-coco-mini-dia",
     "brand": "Chanel",
     "brandKr": "샤넬",
-    "name": "코코 크러쉬 링 (베이지골드, 미니 다이아몬드)",
+    "name": "코코 크러쉬 링 (화이트골드, 미니 다이아몬드)",
     "krPrice": 8820000,
     "jpPrice": 902000,
     "guestCardAllowed": false,
