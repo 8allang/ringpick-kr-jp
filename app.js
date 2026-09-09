@@ -30,7 +30,7 @@ let PRESETS = [
     "tag": "게스트카드 5% 불가",
     "krUrl": "https://www.cartier.com/ko-kr/%EC%A3%BC%EC%96%BC%EB%A6%AC/%EB%A7%81/love/love-%EB%A7%81-%EC%8A%A4%EB%AA%B0%28small%29-%EB%AA%A8%EB%8D%B8-%EB%8B%A4%EC%9D%B4%EC%95%84%EB%AA%AC%EB%93%9C-1%EA%B0%9C-CRB4056100.html",
     "jpUrl": "https://www.cartier.com/ja-jp/jewellery/rings/love/love-%E3%83%AA%E3%83%B3%E3%82%AF-%E3%82%B9%E3%83%A2%E3%83%BC%E3%83%AB%E3%83%A2%E3%83%86-%E3%83%AB-%E3%82%BF-%E3%82%A4%E3%83%A4%E3%83%A2%E3%83%B3%E3%83%88-1%E7%9F%B3-CRB4056100",
-    "imageUrl": "./images/rings/cartier-love-1d.svg"
+    "imageUrl": "./images/rings/cartier-love-1d.png"
   },
   {
     "id": "cartier-c-de-cartier-1d",
@@ -368,7 +368,7 @@ let PRESETS = [
     "tag": "지점별 5% 가능",
     "krUrl": "https://www.chaumet.com/kr_kr/torsade-de-chaumet-ring-095902",
     "jpUrl": "https://www.chaumet.com/jp_ja/torsade-de-chaumet-ring-095902",
-    "imageUrl": "./images/rings/chaumet-torsade-plain.svg"
+    "imageUrl": "./images/rings/chaumet-torsade-plain.png"
   },
   {
     "id": "chaumet-liens-4mm",
@@ -381,7 +381,7 @@ let PRESETS = [
     "tag": "지점별 5% 가능",
     "krUrl": "https://www.chaumet.com/kr_kr/liens-evidence-ring-080224",
     "jpUrl": "https://www.chaumet.com/jp_ja/liens-evidence-ring-080224",
-    "imageUrl": "./images/rings/chaumet-liens-4mm.svg"
+    "imageUrl": "./images/rings/chaumet-liens-4mm.png"
   },
   {
     "id": "chaumet-liens-dia",
