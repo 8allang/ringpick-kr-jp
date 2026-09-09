@@ -134,7 +134,7 @@ let PRESETS = [
     "tag": "게스트카드 5% 불가",
     "krUrl": "https://www.chanel.com/kr/fine-jewelry/p/J11785/coco-crush-ring/",
     "jpUrl": "https://www.chanel.com/jp/fine-jewelry/p/J11785/coco-crush-ring/",
-    "imageUrl": "./images/rings/chanel-coco-mini.jpg"
+    "imageUrl": "./images/rings/chanel-coco-mini-new.png?v=20260909-5"
   },
   {
     "id": "chanel-coco-mini-dia",
@@ -147,7 +147,7 @@ let PRESETS = [
     "tag": "게스트카드 5% 불가",
     "krUrl": "https://www.chanel.com/kr/fine-jewelry/p/J11871/coco-crush-ring/",
     "jpUrl": "https://www.chanel.com/jp/fine-jewelry/p/J11871/coco-crush-ring/",
-    "imageUrl": "./images/rings/chanel-coco-mini-dia.svg"
+    "imageUrl": "./images/rings/chanel-coco-mini-dia.png?v=20260909-5"
   },
   {
     "id": "bvlgari-bzero1-plain",

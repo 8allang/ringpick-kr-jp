@@ -517,8 +517,17 @@ body.light-theme .preset-img-box {
   transition: transform 0.3s ease;
 }
 
+/* Coco Crush source images include wide whitespace around the ring. */
+img[src*="chanel-coco-mini"] {
+  transform: scale(2);
+}
+
 .preset-card:hover .preset-img-box img {
   transform: scale(1.08);
+}
+
+.preset-card:hover img[src*="chanel-coco-mini"] {
+  transform: scale(2.12);
 }
 
 .preset-brand {
