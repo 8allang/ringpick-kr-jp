@@ -2642,9 +2642,16 @@ body.light-theme .footer-creator-box {
   box-shadow: 0 6px 16px rgba(220, 39, 67, 0.35);
 }
 
+.creator-btn.tips-btn {
+  background: linear-gradient(135deg, #F7E7A6, #D4AF37);
+  color: #3D2E05;
+  border: 1px solid #F7E7A6;
+}
+
 .creator-btn.tips-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 16px rgba(212, 175, 55, 0.35);
+  filter: brightness(1.06);
 }
 
 /* Top Savings Ranking Section */
@@ -2809,5 +2816,4 @@ body.light-theme .rank-price-box {
   justify-content: space-between;
   gap: 8px;
 }
-
 
