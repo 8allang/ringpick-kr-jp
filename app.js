@@ -303,7 +303,7 @@ let PRESETS = [
     "tag": "지점별 5% 가능",
     "krUrl": "https://www.boucheron.com/ko/quatre-classique-xs-ring-jrg03330.html",
     "jpUrl": "https://www.boucheron.com/ja_en/quatre-classique-xs-ring-jrg03330.html",
-    "imageUrl": "./images/rings/boucheron-quatre-classic-xs.svg"
+    "imageUrl": "./images/rings/boucheron-quatre-classic-xs.png"
   },
   {
     "id": "boucheron-quatre-black-xs",
@@ -316,7 +316,7 @@ let PRESETS = [
     "tag": "지점별 5% 가능",
     "krUrl": "https://www.boucheron.com/ko/quatre-black-edition-xs-ring-jrg03511.html",
     "jpUrl": "https://www.boucheron.com/ja_en/quatre-black-edition-xs-ring-jrg03511.html",
-    "imageUrl": "./images/rings/boucheron-quatre-black-xs.svg"
+    "imageUrl": "./images/rings/boucheron-quatre-black-xs.png"
   },
   {
     "id": "boucheron-quatre-white-band",
@@ -329,7 +329,7 @@ let PRESETS = [
     "tag": "지점별 5% 가능",
     "krUrl": "https://www.boucheron.com/ko/quatre-double-white-edition-wedding-band-jal00300.html",
     "jpUrl": "https://www.boucheron.com/ja_en/quatre-double-white-edition-wedding-band-jal00300.html",
-    "imageUrl": "./images/rings/boucheron-quatre-white-band.svg"
+    "imageUrl": "./images/rings/boucheron-quatre-white-band.png"
   },
   {
     "id": "chaumet-torsade-1d",
