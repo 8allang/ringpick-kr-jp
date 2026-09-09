@@ -1448,6 +1448,30 @@ body.light-theme .total-val.kr-color { color: #2563EB; }
   font-size: 0.78rem;
 }
 
+.error-report-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 16px;
+  padding: 9px 16px;
+  border: 1px solid var(--border-gold);
+  border-radius: 999px;
+  color: var(--text-gold);
+  background: rgba(212, 175, 55, 0.08);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.error-report-link:hover {
+  color: #2B2105;
+  background: var(--gold-primary);
+  border-color: var(--gold-primary);
+  transform: translateY(-1px);
+}
+
 .toast {
   position: fixed;
   bottom: 30px;
