@@ -522,12 +522,21 @@ img[src*="chanel-coco-mini"] {
   transform: scale(2);
 }
 
+/* Tiffany source images also include wide whitespace around the rings. */
+img[src*="tiffany-"] {
+  transform: scale(1.8);
+}
+
 .preset-card:hover .preset-img-box img {
   transform: scale(1.08);
 }
 
 .preset-card:hover img[src*="chanel-coco-mini"] {
   transform: scale(2.12);
+}
+
+.preset-card:hover img[src*="tiffany-"] {
+  transform: scale(1.92);
 }
 
 .preset-brand {

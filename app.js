@@ -69,7 +69,7 @@ let PRESETS = [
     "tag": "지점별 5% 가능",
     "krUrl": "https://www.tiffany.kr/jewelry/rings/tiffany-together-18k-rose-gold-and-platinum-rings-62499893.html",
     "jpUrl": "https://www.tiffany.co.jp/jewelry/rings/tiffany-together-milgrain-band-ring-GRP00377/",
-    "imageUrl": "./images/rings/tiffany-milgrain-4mm.svg"
+    "imageUrl": "./images/rings/tiffany-milgrain-4mm.png?v=20260909-6"
   },
   {
     "id": "tiffany-together-1d-4mm",
@@ -82,7 +82,7 @@ let PRESETS = [
     "tag": "지점별 5% 가능",
     "krUrl": "https://www.tiffany.kr/jewelry/rings/tiffany-together-platinum-diamond-rings-74791352.html",
     "jpUrl": "https://www.tiffany.co.jp/jewelry/rings/tiffany-together-milgrain-band-ring-GRP12898/",
-    "imageUrl": "./images/rings/tiffany-together-1d-4mm.svg"
+    "imageUrl": "./images/rings/tiffany-together-1d-4mm.png?v=20260909-6"
   },
   {
     "id": "tiffany-harmony-pt-3mm",
@@ -95,7 +95,7 @@ let PRESETS = [
     "tag": "지점별 5% 가능",
     "krUrl": "https://www.tiffany.kr/jewelry/rings/tiffany-harmony-platinum-rings-60002089.html?queryID=5ab65aa1514bb89d4c4f1575227b09ac&objectID=60002089&indexName=ecommerce_kr_products__ko_KR&searchQuery=%ED%95%98%EB%AA%A8%EB%8B%88&variantId=1792963392",
     "jpUrl": "https://www.tiffany.co.jp/jewelry/rings/tiffany-harmony-wedding-band-GRP05873/",
-    "imageUrl": "./images/rings/tiffany-harmony-pt-3mm.svg"
+    "imageUrl": "./images/rings/tiffany-harmony-pt-3mm.png?v=20260909-6"
   },
   {
     "id": "tiffany-harmony-dia",
@@ -108,7 +108,7 @@ let PRESETS = [
     "tag": "지점별 5% 가능",
     "krUrl": "https://www.tiffany.kr/jewelry/rings/tiffany-harmony-18k-rose-gold-round-brilliant-diamonds-rings-60004611.html?queryID=dc417a9c24002b10fcbb5a1998adaeb7&objectID=60004611&indexName=ecommerce_kr_products__ko_KR&searchQuery=harm",
     "jpUrl": "https://www.tiffany.co.jp/jewelry/rings/tiffany-harmony-band-ring-GRP08146/",
-    "imageUrl": "./images/rings/tiffany-harmony-dia.svg"
+    "imageUrl": "./images/rings/tiffany-harmony-dia.png?v=20260909-6"
   },
   {
     "id": "tiffany-band-3dia",
@@ -121,7 +121,7 @@ let PRESETS = [
     "tag": "지점별 5% 가능",
     "krUrl": "https://www.tiffany.kr/jewelry/rings/tco-18k-rose-gold-round-brilliant-diamonds-rings-72649834.html",
     "jpUrl": "https://www.tiffany.co.jp/jewelry/rings/tco-band-ring-GRP12362/",
-    "imageUrl": "./images/rings/tiffany-band-3dia.jpg"
+    "imageUrl": "./images/rings/tiffany-band-3dia-new.png?v=20260909-6"
   },
   {
     "id": "chanel-coco-mini",
