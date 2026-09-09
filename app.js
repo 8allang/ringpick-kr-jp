@@ -186,7 +186,7 @@ let PRESETS = [
     "tag": "지점별 5% 가능",
     "krUrl": "https://www.bulgari.com/ko-kr/AN856868.html",
     "jpUrl": "https://www.bulgari.com/ja-jp/AN856868.html",
-    "imageUrl": "./images/rings/bvlgari-serpenti-plain.png"
+    "imageUrl": "./images/rings/bvlgari-serpenti-plain-new.png?v=20260909-4"
   },
   {
     "id": "bvlgari-serpenti-dia",
@@ -199,7 +199,7 @@ let PRESETS = [
     "tag": "지점별 5% 가능",
     "krUrl": "https://www.bulgari.com/ko-kr/AN857896.html",
     "jpUrl": "https://www.bulgari.com/ja-jp/AN857896.html",
-    "imageUrl": "./images/rings/bvlgari-serpenti-dia.svg"
+    "imageUrl": "./images/rings/bvlgari-serpenti-dia.png?v=20260909-4"
   },
   {
     "id": "bvlgari-infinito-1d",
@@ -212,7 +212,7 @@ let PRESETS = [
     "tag": "지점별 5% 가능",
     "krUrl": "https://www.bulgari.com/ko-kr/AN857694.html",
     "jpUrl": "https://www.bulgari.com/ja-jp/AN857694.html",
-    "imageUrl": "./images/rings/bvlgari-infinito-1d.svg"
+    "imageUrl": "./images/rings/bvlgari-infinito-1d.png?v=20260909-4"
   },
   {
     "id": "bvlgari-infinito-pave",
@@ -225,7 +225,7 @@ let PRESETS = [
     "tag": "지점별 5% 가능",
     "krUrl": "https://www.bulgari.com/ko-kr/AN857697.html",
     "jpUrl": "https://www.bulgari.com/ja-jp/AN857697.html",
-    "imageUrl": "./images/rings/bvlgari-infinito-pave.svg"
+    "imageUrl": "./images/rings/bvlgari-infinito-pave.png?v=20260909-4"
   },
   {
     "id": "bvlgari-marryme-1d",
@@ -238,7 +238,7 @@ let PRESETS = [
     "tag": "지점별 5% 가능",
     "krUrl": "https://www.bulgari.com/ko-kr/AN854104.html",
     "jpUrl": "https://www.bulgari.com/ja-jp/AN854104.html",
-    "imageUrl": "./images/rings/bvlgari-marryme-1d.svg"
+    "imageUrl": "./images/rings/bvlgari-marryme-1d.png?v=20260909-4"
   },
   {
     "id": "bvlgari-marryme-5d",
@@ -251,7 +251,7 @@ let PRESETS = [
     "tag": "지점별 5% 가능",
     "krUrl": "https://www.bulgari.com/ko-kr/AN852593.html",
     "jpUrl": "https://www.bulgari.com/ja-jp/AN852593.html",
-    "imageUrl": "./images/rings/bvlgari-marryme-5d.svg"
+    "imageUrl": "./images/rings/bvlgari-marryme-5d.png?v=20260909-4"
   },
   {
     "id": "tasaki-trapezio-plain",
