@@ -1452,6 +1452,14 @@ body.light-theme .total-val.kr-color { color: #2563EB; }
   font-weight: 700;
 }
 
+.purchase-check-notice {
+  padding: 10px 12px;
+  border: 1px solid rgba(218, 153, 55, 0.42);
+  border-radius: var(--radius-sm);
+  background: rgba(255, 192, 91, 0.11);
+  color: var(--text-primary);
+}
+
 .guide-details {
   margin-top: 2px;
   padding: 9px 11px;
