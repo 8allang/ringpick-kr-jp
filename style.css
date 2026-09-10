@@ -137,9 +137,9 @@ body {
 
   .header::before {
     background:
-      linear-gradient(rgba(247, 252, 255, 0.9), rgba(247, 252, 255, 0.94)),
+      linear-gradient(rgba(247, 252, 255, 0.72), rgba(247, 252, 255, 0.8)),
       url("./images/wedding-ring-calculator-couple-wide.png?v=20260910-1") 66% center / cover no-repeat;
-    opacity: 0.56;
+    opacity: 0.95;
   }
 }
 
