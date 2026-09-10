@@ -2844,10 +2844,6 @@ body.light-theme .footer-creator-box {
   border-bottom: 1px dashed var(--border-color);
 }
 
-.rank-medal {
-  font-size: 1.4rem;
-}
-
 .rank-title {
   font-size: 0.88rem;
   font-weight: 800;

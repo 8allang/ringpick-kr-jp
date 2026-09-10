@@ -1486,9 +1486,9 @@ function renderTopSavingsRanking() {
 
   const top3 = evaluated.slice(0, 3);
   const medals = [
-    { title: '🥇 1위 (최고 절약)', class: 'rank-1', medal: '🥇' },
-    { title: '🥈 2위', class: 'rank-2', medal: '🥈' },
-    { title: '🥉 3위', class: 'rank-3', medal: '🥉' }
+    { title: '🥇 1위 (최고 절약)', class: 'rank-1' },
+    { title: '🥈 2위', class: 'rank-2' },
+    { title: '🥉 3위', class: 'rank-3' }
   ];
 
   top3.forEach((entry, idx) => {
@@ -1503,7 +1503,6 @@ function renderTopSavingsRanking() {
 
     card.innerHTML = `
       <div class="rank-top-badge">
-        <span class="rank-medal">${rankInfo.medal}</span>
         <span class="rank-title">${rankInfo.title}</span>
       </div>
       <div class="rank-card-body">
