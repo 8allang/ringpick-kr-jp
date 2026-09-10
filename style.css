@@ -658,10 +658,10 @@ img[src*="tiffany-"] {
   align-items: center;
   gap: 4px;
   font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--gold-light);
-  background: rgba(79, 147, 185, 0.1);
-  border: 1px solid rgba(79, 147, 185, 0.3);
+  font-weight: 700;
+  color: #FFFFFF;
+  background: #286181;
+  border: 1px solid #286181;
   padding: 5px 12px;
   border-radius: 20px;
   text-decoration: none;
@@ -669,9 +669,9 @@ img[src*="tiffany-"] {
 }
 
 .card-header-store-link:hover {
-  background: var(--gold-primary);
-  color: #0F172A;
-  box-shadow: 0 2px 8px rgba(79, 147, 185, 0.35);
+  background: #1D4E69;
+  color: #FFFFFF;
+  box-shadow: 0 3px 10px rgba(40, 97, 129, 0.32);
   transform: translateY(-1px);
 }
 
