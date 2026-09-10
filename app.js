@@ -433,7 +433,7 @@ let PRESETS = [
     "tag": "지점별 5% 가능",
     "krUrl": "https://www.piaget.com/kr-ko/jewelry/possession/white-gold-diamond-ring-g34p8k00",
     "jpUrl": "https://www.piaget.com/jp-ja/jewelry/possession/white-gold-diamond-ring-g34p8k00",
-    "imageUrl": "./images/rings/piaget-possession-placeholder.svg"
+    "imageUrl": "./images/rings/piaget-possession-decor-palace.png?v=20260911-1"
   },
   {
     "id": "piaget-possession-lettering",
@@ -446,7 +446,7 @@ let PRESETS = [
     "tag": "지점별 5% 가능",
     "krUrl": "https://www.piaget.com/kr-ko/jewelry/possession/white-gold-diamond-ring-g34p1n00",
     "jpUrl": "https://www.piaget.com/jp-ja/jewelry/possession/white-gold-diamond-ring-g34p1n00",
-    "imageUrl": "./images/rings/piaget-possession-placeholder.svg"
+    "imageUrl": "./images/rings/piaget-possession-lettering.webp?v=20260911-1"
   },
   {
     "id": "piaget-possession-decor-palace-8d",
@@ -459,7 +459,7 @@ let PRESETS = [
     "tag": "지점별 5% 가능",
     "krUrl": "https://www.piaget.com/kr-ko/jewelry/possession/white-gold-diamond-ring-g34p1l00",
     "jpUrl": "https://www.piaget.com/jp-ja/jewelry/possession/white-gold-diamond-ring-g34p1l00",
-    "imageUrl": "./images/rings/piaget-possession-placeholder.svg"
+    "imageUrl": "./images/rings/piaget-possession-decor-palace-8d.webp?v=20260911-1"
   }
 ];
 
