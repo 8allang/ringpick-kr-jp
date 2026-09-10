@@ -1,6 +1,6 @@
 /**
  * WEDDING BAND PRICE INDEX - CORE APPLICATION
- * Target 8 Luxury Brands: Cartier, Tiffany & Co., Chanel, Bvlgari, Tasaki, Boucheron, Chaumet, Graff
+ * Target 8 Luxury Brands: Cartier, Tiffany & Co., Chanel, Bvlgari, Tasaki, Boucheron, Chaumet, Piaget
  * Includes Live Crawl Log Viewer
  */
 
@@ -421,6 +421,45 @@ let PRESETS = [
     "krUrl": "https://www.chaumet.com/kr_kr/triomphe-de-chaumet-ring-082640",
     "jpUrl": "https://www.chaumet.com/jp_ja/jewellery/rings",
     "imageUrl": "./images/rings/chaumet-triomphe-pave.png?v=20260909-2"
+  },
+  {
+    "id": "piaget-possession-decor-palace",
+    "brand": "Piaget",
+    "brandKr": "피아제",
+    "name": "포제션 데코팰리스링 (18K, 화이트골드)",
+    "krPrice": 5000000,
+    "jpPrice": 514800,
+    "guestCardAllowed": true,
+    "tag": "지점별 5% 가능",
+    "krUrl": "https://www.piaget.com/kr-ko/jewelry/possession/white-gold-diamond-ring-g34p8k00",
+    "jpUrl": "https://www.piaget.com/jp-ja/jewelry/possession/white-gold-diamond-ring-g34p8k00",
+    "imageUrl": "./images/rings/piaget-possession-placeholder.svg"
+  },
+  {
+    "id": "piaget-possession-lettering",
+    "brand": "Piaget",
+    "brandKr": "피아제",
+    "name": "포제션 레터링 (18K, 화이트골드)",
+    "krPrice": 4540000,
+    "jpPrice": 466400,
+    "guestCardAllowed": true,
+    "tag": "지점별 5% 가능",
+    "krUrl": "https://www.piaget.com/kr-ko/jewelry/possession/white-gold-diamond-ring-g34p1n00",
+    "jpUrl": "https://www.piaget.com/jp-ja/jewelry/possession/white-gold-diamond-ring-g34p1n00",
+    "imageUrl": "./images/rings/piaget-possession-placeholder.svg"
+  },
+  {
+    "id": "piaget-possession-decor-palace-8d",
+    "brand": "Piaget",
+    "brandKr": "피아제",
+    "name": "포제션 데코팰리스링 (18K, 화이트골드, 8다이아)",
+    "krPrice": 7500000,
+    "jpPrice": 770000,
+    "guestCardAllowed": true,
+    "tag": "지점별 5% 가능",
+    "krUrl": "https://www.piaget.com/kr-ko/jewelry/possession/white-gold-diamond-ring-g34p1l00",
+    "jpUrl": "https://www.piaget.com/jp-ja/jewelry/possession/white-gold-diamond-ring-g34p1l00",
+    "imageUrl": "./images/rings/piaget-possession-placeholder.svg"
   }
 ];
 
@@ -1060,7 +1099,7 @@ function applyPreset(preset) {
   if (preset.brand === 'Cartier' || preset.brand === 'Chanel' || preset.brand === 'Bvlgari') {
     dom.guestCardNote.textContent = `${preset.brandKr || preset.brand}는 대부분 백화점 5% 게스트카드 제외 매장입니다.`;
     dom.guestCardNote.style.color = '#F87171';
-  } else if (preset.brand === 'Chaumet') {
+  } else if (preset.brand === 'Chaumet' || preset.brand === 'Piaget') {
     dom.guestCardNote.textContent = `${preset.brandKr || preset.brand}는 대부분 일본 백화점에서 5% 게스트카드 할인이 적용됩니다.`;
     dom.guestCardNote.style.color = '#34D399';
   } else if (preset.brand === 'Boucheron') {

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" role="img" aria-labelledby="title desc">
+  <title id="title">피아제 포제션 링 이미지 준비 중</title>
+  <desc id="desc">화이트골드 링을 표현한 임시 이미지</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f9fcfe"/>
+      <stop offset="1" stop-color="#e6f2f8"/>
+    </linearGradient>
+    <linearGradient id="metal" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#aebbc3"/>
+      <stop offset="0.28" stop-color="#ffffff"/>
+      <stop offset="0.56" stop-color="#cbd5dc"/>
+      <stop offset="0.8" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#8798a3"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="14" stdDeviation="12" flood-color="#47728a" flood-opacity=".2"/>
+    </filter>
+  </defs>
+  <rect width="640" height="420" rx="28" fill="url(#bg)"/>
+  <g filter="url(#shadow)" transform="translate(320 190) rotate(-9)">
+    <ellipse rx="176" ry="91" fill="none" stroke="url(#metal)" stroke-width="42"/>
+    <ellipse rx="176" ry="91" fill="none" stroke="#667985" stroke-opacity=".28" stroke-width="3"/>
+    <circle cx="-116" cy="-65" r="10" fill="#fff" stroke="#91a4af" stroke-width="4"/>
+    <circle cx="-76" cy="-78" r="10" fill="#fff" stroke="#91a4af" stroke-width="4"/>
+    <circle cx="-33" cy="-86" r="10" fill="#fff" stroke="#91a4af" stroke-width="4"/>
+  </g>
+  <text x="320" y="365" text-anchor="middle" fill="#526f80" font-family="Arial, sans-serif" font-size="22" font-weight="700">PIAGET POSSESSION</text>
+</svg>
