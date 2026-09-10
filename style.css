@@ -124,9 +124,9 @@ body {
   inset: 0;
   z-index: -1;
   background:
-    linear-gradient(90deg, rgba(247, 252, 255, 0.97) 0%, rgba(247, 252, 255, 0.88) 48%, rgba(247, 252, 255, 0.48) 100%),
-    url("./images/wedding-ring-calculator-couple.png?v=20260910-1") 78% 43% / cover no-repeat;
-  opacity: 0.72;
+    linear-gradient(90deg, rgba(247, 252, 255, 0.98) 0%, rgba(247, 252, 255, 0.88) 44%, rgba(247, 252, 255, 0.3) 72%, rgba(247, 252, 255, 0.12) 100%),
+    url("./images/wedding-ring-calculator-couple-wide.png?v=20260910-1") center 48% / cover no-repeat;
+  opacity: 0.9;
 }
 
 @media (max-width: 600px) {
@@ -138,7 +138,7 @@ body {
   .header::before {
     background:
       linear-gradient(rgba(247, 252, 255, 0.9), rgba(247, 252, 255, 0.94)),
-      url("./images/wedding-ring-calculator-couple.png?v=20260910-1") center 38% / cover no-repeat;
+      url("./images/wedding-ring-calculator-couple-wide.png?v=20260910-1") 66% center / cover no-repeat;
     opacity: 0.56;
   }
 }
