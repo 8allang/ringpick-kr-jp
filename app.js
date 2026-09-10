@@ -594,7 +594,7 @@ function parseNumber(str) {
 // --- Fetch External Data (rings.json) ---
 async function loadExternalRingsData() {
   try {
-    const res = await fetch('./data/rings.json?v=20260910-12');
+    const res = await fetch('./data/rings.json?v=20260911-3');
     if (!res.ok) throw new Error('Failed to load rings.json');
     const data = await res.json();
     if (data && data.rings && Array.isArray(data.rings)) {
