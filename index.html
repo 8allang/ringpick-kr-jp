@@ -13,7 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Pretendard:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   
   <!-- Styles -->
-  <link rel="stylesheet" href="style.css?v=20260910-11">
+  <link rel="stylesheet" href="style.css?v=20260910-12">
 </head>
 <body class="light-theme">
   <div class="app-container">
@@ -138,9 +138,9 @@
               <div class="option-info">
                 <div class="option-title">
                   <span>백화점 게스트카드 5% 할인</span>
-                  <span class="info-tooltip" title="한큐, 이세탄, 다카시마야 등 백화점에서 발급되는 5% 할인 쿠폰입니다. (일부 명품 브랜드 제외)">ℹ️</span>
+                  <span class="info-tooltip" title="일본 백화점에서 발급되는 5% 할인 혜택으로, 백화점·지점·브랜드별 제외 조건이 다릅니다. 구매 전 매장 확인이 필요합니다.">ℹ️</span>
                 </div>
-                <div class="option-desc" id="guestCardNote">한큐, 다카시마야 등 백화점 구매 시</div>
+                <div class="option-desc" id="guestCardNote">백화점·지점·브랜드별 적용 여부 확인 필요</div>
               </div>
               <label class="switch">
                 <input type="checkbox" id="jpGuestCard">
@@ -406,10 +406,19 @@
       <div class="guide-cards-grid">
         <div class="guide-card">
           <div class="guide-icon">🎫</div>
-          <h4 class="guide-title">7대 브랜드 게스트카드 5% 팩트체크</h4>
-          <p class="guide-text">
-            <strong>까르띠에, 샤넬</strong>은 게스트카드 5% 적용에서 <strong>제외</strong>됩니다. 반면 <strong>불가리, 그라프, 부쉐론, 티파니</strong>는 백화점 지점(한큐, 이세탄, 다카시마야 등)에 따라 적용되며, <strong>쇼메</strong>는 대부분 5% 할인이 가능합니다.
-          </p>
+          <h4 class="guide-title">백화점별 게스트카드 5% 안내</h4>
+          <div class="guide-text guest-card-guide">
+            <p><strong>이세탄·미츠코시</strong> — 부쉐론은 5% 게스트카드 적용 가능. 이세탄의 할인 제외 브랜드에는 까르띠에, 샤넬, 티파니, 불가리 등이 포함됩니다.</p>
+            <p><strong>다카시마야</strong> — 하이엔드 명품 브랜드와 시계·주얼리는 게스트카드 할인 대상에서 제외됩니다.</p>
+            <p><strong>한큐백화점</strong> — 까르띠에, 에르메스, 샤넬, 티파니, 불가리는 할인 제외. 피아제와 쇼메는 적용 가능하며, 면세 환급 수수료 1.55% 공제 시 실환급률은 약 8.45%입니다.</p>
+            <p><strong>불가리</strong> — 일본 백화점 전체에서 게스트카드 할인 불가 브랜드로 안내됩니다.</p>
+            <p><strong>타사키</strong> — 적용 여부가 매장별로 달라 구매 전 해당 지점에 확인이 필요합니다.</p>
+            <p class="guide-policy-summary">면세 10% · 게스트카드 5% (백화점 면세 카운터 이용 시 수수료 공제 가능)</p>
+            <details class="guide-details">
+              <summary>이세탄 할인 제외 브랜드 전체 보기</summary>
+              <p>Louis Vuitton, Hermès, Cartier, Chanel, Tiffany, Foxey, Bvlgari, Leica, Berluti, Patek Philippe, Chrome Hearts, Rolex, Van Cleef &amp; Arpels, Mikimoto, Goyard, Harry Winston, Panasonic Beauty, Tudor, Dior Jewelry, Liverano &amp; Liverano, Richard Mille, Saint-Louis, Graff, Gold Salon SGC, A. Lange &amp; Söhne 등. 일부 품목은 별도 제외 조건이 적용될 수 있습니다.</p>
+            </details>
+          </div>
         </div>
 
         <div class="guide-card">
@@ -631,6 +640,6 @@
   <div class="toast" id="toast">복사되었습니다!</div>
 
   <!-- Scripts -->
-  <script src="app.js?v=20260910-10"></script>
+  <script src="app.js?v=20260910-12"></script>
 </body>
 </html>
