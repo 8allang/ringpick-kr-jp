@@ -1823,21 +1823,38 @@ function setupEventListeners() {
   dom.copyResultBtn.addEventListener('click', () => {
     const data = calculatePrices();
     const modeStr = data.multiplier === 2 ? '2인' : '1인';
-    
-    let summaryText = `💍 [웨딩밴드 한일 가격비교 결과]\n`;
-    summaryText += `구분: ${modeStr}\n`;
-    summaryText += `----------------------------\n`;
-    summaryText += `🇯🇵 일본 실구매가: ${formatKRW(data.totalJapanKRW)} (결제 ${formatJPY(data.jpTotalSpentJPY)} + 세관 ${formatKRW(data.finalCustomsTax)})\n`;
+    const modeIcon = data.multiplier === 2 ? '👥' : '👤';
+    const selectedPreset = PRESETS.find(preset => preset.id === state.activePresetId);
+    const selectedRing = selectedPreset
+      ? `${selectedPreset.brandKr || selectedPreset.brand} · ${selectedPreset.name}`
+      : '직접 입력 · 사용자 입력 모델';
+    const giftDiscount = Number(data.totalKrDiscountPercent.toFixed(1)).toString();
+
+    updateURLQuery();
+
+    let summaryText = `💍 웨딩밴드 한·일 가격 비교\n`;
+    summaryText += `💎 선택한 반지: ${selectedRing}\n`;
+    summaryText += `${modeIcon} ${modeStr} 기준\n`;
+    summaryText += `🇯🇵 일본 실구매가: ${formatKRW(data.totalJapanKRW)}\n`;
+    summaryText += `└ 현지 결제 ${formatJPY(data.jpTotalSpentJPY)} + 세관비용 ${formatKRW(data.finalCustomsTax)}\n`;
     summaryText += `🇰🇷 한국 실구매가: ${formatKRW(data.totalKoreaKRW)}\n`;
-    summaryText += `----------------------------\n`;
-    
+    summaryText += `└ 백화점 상품권 할인 ${giftDiscount}% 적용\n`;
+
     if (data.diffKRW > 0) {
-      summaryText += `🏆 일본에서 구매 시 약 ${formatKRW(data.diffKRW)} 절약 (${data.savePercent.toFixed(1)}% Save)!\n`;
-      summaryText += `✈️ ${dom.travelMsg.textContent}\n`;
+      summaryText += `🏆 일본 구매 시 ${formatKRW(data.diffKRW)} 절약\n`;
+      summaryText += `└ 한국보다 ${data.savePercent.toFixed(1)}% 저렴해요!\n`;
+    } else if (data.diffKRW < 0) {
+      const koreaSavePercent = data.totalJapanKRW > 0
+        ? (Math.abs(data.diffKRW) / data.totalJapanKRW) * 100
+        : 0;
+      summaryText += `🏆 한국 구매 시 ${formatKRW(Math.abs(data.diffKRW))} 절약\n`;
+      summaryText += `└ 일본보다 ${koreaSavePercent.toFixed(1)}% 저렴해요!\n`;
     } else {
-      summaryText += `🇰🇷 한국 백화점에서 구매하는 것이 약 ${formatKRW(Math.abs(data.diffKRW))} 더 유리합니다!\n`;
+      summaryText += `⚖️ 한국과 일본의 실구매가가 같아요!\n`;
     }
-    summaryText += `🔗 링크: ${window.location.href}`;
+    summaryText += `🔗 계산 결과 보기\n`;
+    summaryText += `${window.location.href}\n`;
+    summaryText += `※ 계산 결과는 입력 정보 기준의 예상 금액입니다. 환율·판매가·할인 혜택·면세 및 세관 기준에 따라 실제 금액이 달라질 수 있으니, 구매 전 최종 가격을 꼭 확인해주세요.`;
     
     navigator.clipboard.writeText(summaryText).then(() => {
       showToast('📋 결과 요약이 클립보드에 복사되었습니다!');
