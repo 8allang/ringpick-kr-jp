@@ -2684,6 +2684,23 @@ body.light-theme .quick-url-link.jp {
   margin: 0;
 }
 
+.recom-benefit {
+  margin: 3px 0 0;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  word-break: keep-all;
+}
+
+.recom-link-label {
+  display: inline-flex;
+  align-self: flex-start;
+  margin-top: 5px;
+  color: var(--gold-dark);
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
 /* Footer Creator Box */
 .footer-creator-box {
   background: linear-gradient(135deg, rgba(79, 147, 185, 0.12), rgba(15, 23, 42, 0.6));
