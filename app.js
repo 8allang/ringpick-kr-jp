@@ -1216,21 +1216,21 @@ function calculateAndRender() {
   } else {
     dom.verdictTrophy.textContent = '🇰🇷';
     dom.verdictWinnerBadge.textContent = '이정도면 한국에서 삽시다..';
-    dom.verdictWinnerBadge.style.color = '#60A5FA';
+    dom.verdictWinnerBadge.style.color = '#1F5D7A';
     
     if (data.diffKRW > 0) {
       dom.verdictDiffAmount.textContent = formatKRW(data.diffKRW);
-      dom.verdictDiffAmount.style.color = '#93C5FD';
+      dom.verdictDiffAmount.style.color = '#357DA6';
       dom.verdictDiffPercent.textContent = `(${data.savePercent.toFixed(1)}% 차이)`;
       dom.travelMsg.textContent = '가격 차이가 20만 원 미만이므로 A/S 편의성과 백화점 혜택이 좋은 한국 구매를 권장합니다.';
     } else if (data.diffKRW < 0) {
       dom.verdictDiffAmount.textContent = formatKRW(Math.abs(data.diffKRW));
-      dom.verdictDiffAmount.style.color = '#93C5FD';
+      dom.verdictDiffAmount.style.color = '#357DA6';
       dom.verdictDiffPercent.textContent = `(한국이 ${Math.abs(data.savePercent).toFixed(1)}% 더 저렴)`;
       dom.travelMsg.textContent = '국내 백화점 상품권 할인을 활용해 한국에서 구매하는 것이 더 유리합니다.';
     } else {
       dom.verdictDiffAmount.textContent = '0원';
-      dom.verdictDiffAmount.style.color = '#93C5FD';
+      dom.verdictDiffAmount.style.color = '#357DA6';
       dom.verdictDiffPercent.textContent = '';
       dom.travelMsg.textContent = '국내외 총 결제 비용이 동일하므로 A/S 및 수령 편의성에 따라 선택하세요.';
     }
