@@ -696,10 +696,12 @@ img[src*="tiffany-"] {
 }
 
 .calc-card.japan-card {
+  order: 2;
   border-top: 4px solid var(--jp-accent);
 }
 
 .calc-card.korea-card {
+  order: 1;
   border-top: 4px solid var(--kr-accent);
 }
 
