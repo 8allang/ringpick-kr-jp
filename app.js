@@ -487,7 +487,7 @@ let state = {
   customsSelfDeclare: true, // 30% reduction up to 200,000 KRW
   
   // Korea Options
-  giftDiscountType: '3.0',
+  giftDiscountType: '0',
   customGiftDiscount: 3.0,
   mileageRate: 0,
   

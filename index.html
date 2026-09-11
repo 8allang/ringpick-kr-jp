@@ -236,13 +236,13 @@
                   <span>백화점 상품권 할인율</span>
                   <span class="info-tooltip" title="명동 등 상품권 매매소에서 롯데/신세계/현대 상품권을 2.5%~3.5% 할인된 가격으로 구매해 결제하는 방식입니다.">ℹ️</span>
                 </div>
-                <div class="option-desc">평균 3.0% 할인 결제 적용</div>
+                <div class="option-desc">기본값은 상품권 할인 미적용</div>
               </div>
               <div class="select-with-custom">
                 <select id="krGiftDiscount" class="luxury-select">
-                  <option value="0">할인 없음 (0%)</option>
+                  <option value="0" selected>할인 없음 (0%)</option>
                   <option value="2.5">2.5% 할인</option>
-                  <option value="3.0" selected>3.0% 할인 (평균)</option>
+                  <option value="3.0">3.0% 할인 (평균)</option>
                   <option value="3.5">3.5% 할인</option>
                   <option value="custom">직접 입력</option>
                 </select>
@@ -646,6 +646,6 @@
   <div class="toast" id="toast">복사되었습니다!</div>
 
   <!-- Scripts -->
-  <script src="app.js?v=20260911-6"></script>
+  <script src="app.js?v=20260911-7"></script>
 </body>
 </html>
