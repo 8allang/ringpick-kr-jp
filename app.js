@@ -484,7 +484,7 @@ let state = {
   hasGuestCard: false,
   taxFreeType: 'dept', // 'dept' (8.45%), 'boutique' (10%), 'none' (0%)
   cardFeeRate: 0, // 0%, 1.2%, 1.5%
-  customsSelfDeclare: true, // 30% reduction
+  customsSelfDeclare: true, // 30% reduction, capped at 200,000 KRW
   
   // Korea Options
   giftDiscountType: '0',
@@ -1170,11 +1170,9 @@ function calculatePrices() {
     const baseCustomsTax = customsDuty;
     
     if (state.customsSelfDeclare) {
-      finalCustomsTax = Math.floor(taxableKRW * 0.15 * 0.7);
-      customsReduction = baseCustomsTax - finalCustomsTax;
-    } else {
-      finalCustomsTax = baseCustomsTax;
+      customsReduction = Math.floor(Math.min(baseCustomsTax * 0.30, 200000));
     }
+    finalCustomsTax = baseCustomsTax - customsReduction;
   }
   
   const totalJapanKRW = jpPaidKRW + finalCustomsTax;
@@ -1443,11 +1441,11 @@ function calculatePricesForItem(item) {
   let finalCustomsTax = 0;
   if (taxableKRW > 0) {
     const baseCustoms = Math.floor(taxableKRW * 0.15);
+    let reduction = 0;
     if (state.customsSelfDeclare) {
-      finalCustomsTax = Math.floor(taxableKRW * 0.15 * 0.7);
-    } else {
-      finalCustomsTax = baseCustoms;
+      reduction = Math.floor(Math.min(baseCustoms * 0.30, 200000));
     }
+    finalCustomsTax = baseCustoms - reduction;
   }
 
   const totalJapanKRW = jpPaidKRW + finalCustomsTax;
