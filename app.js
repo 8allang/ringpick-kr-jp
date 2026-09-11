@@ -484,7 +484,7 @@ let state = {
   hasGuestCard: false,
   taxFreeType: 'dept', // 'dept' (8.45%), 'boutique' (10%), 'none' (0%)
   cardFeeRate: 0, // 0%, 1.2%, 1.5%
-  customsSelfDeclare: true, // 30% reduction up to 200,000 KRW
+  customsSelfDeclare: true, // 30% reduction
   
   // Korea Options
   giftDiscountType: '0',
@@ -1166,16 +1166,15 @@ function calculatePrices() {
   let finalCustomsTax = 0;
   
   if (taxableKRW > 0) {
-    customsDuty = Math.floor(taxableKRW * 0.08);
-    customsVAT = Math.floor((taxableKRW + customsDuty) * 0.10);
-    const baseCustomsTax = customsDuty + customsVAT;
+    customsDuty = Math.floor(taxableKRW * 0.15);
+    const baseCustomsTax = customsDuty;
     
     if (state.customsSelfDeclare) {
-      const maxReduction = 200000 * multiplier;
-      customsReduction = Math.min(Math.floor(baseCustomsTax * 0.30), maxReduction);
+      finalCustomsTax = Math.floor(taxableKRW * 0.15 * 0.7);
+      customsReduction = baseCustomsTax - finalCustomsTax;
+    } else {
+      finalCustomsTax = baseCustomsTax;
     }
-    
-    finalCustomsTax = Math.max(0, baseCustomsTax - customsReduction);
   }
   
   const totalJapanKRW = jpPaidKRW + finalCustomsTax;
@@ -1356,7 +1355,7 @@ function calculateAndRender() {
         <span class="r-val">${formatUSD(data.taxableUSD)} (${formatKRW(data.taxableKRW)})</span>
       </div>
       <div class="receipt-line sub-line">
-        <span class="r-label">↳ 관세(8%) + 부가세(10%)</span>
+        <span class="r-label">↳ 간이세율(15%)</span>
         <span class="r-val">${formatKRW(data.customsDuty + data.customsVAT)}</span>
       </div>
     `;
@@ -1443,14 +1442,12 @@ function calculatePricesForItem(item) {
 
   let finalCustomsTax = 0;
   if (taxableKRW > 0) {
-    const duty = Math.floor(taxableKRW * 0.08);
-    const vat = Math.floor((taxableKRW + duty) * 0.10);
-    const baseCustoms = duty + vat;
-    let reduction = 0;
+    const baseCustoms = Math.floor(taxableKRW * 0.15);
     if (state.customsSelfDeclare) {
-      reduction = Math.min(Math.floor(baseCustoms * 0.30), 200000 * multiplier);
+      finalCustomsTax = Math.floor(taxableKRW * 0.15 * 0.7);
+    } else {
+      finalCustomsTax = baseCustoms;
     }
-    finalCustomsTax = Math.max(0, baseCustoms - reduction);
   }
 
   const totalJapanKRW = jpPaidKRW + finalCustomsTax;
