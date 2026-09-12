@@ -892,6 +892,19 @@ body.light-theme .highlight-text {
   color: var(--text-muted);
 }
 
+.customs-direct-link {
+  width: fit-content;
+  margin-top: 4px;
+  color: var(--gold-primary);
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.customs-direct-link:hover {
+  text-decoration: underline;
+}
+
 .info-tooltip {
   cursor: help;
   font-size: 0.85rem;
