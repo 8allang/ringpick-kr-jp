@@ -1906,10 +1906,26 @@ function setupEventListeners() {
   });
 }
 
+function setupPartnerClickTracking() {
+  document.querySelectorAll('.recom-card[data-partner-name]').forEach(card => {
+    card.addEventListener('click', () => {
+      if (typeof window.gtag !== 'function') return;
+
+      window.gtag('event', 'partner_link_click', {
+        partner_name: card.dataset.partnerName,
+        link_url: card.href,
+        link_domain: new URL(card.href).hostname,
+        transport_type: 'beacon'
+      });
+    });
+  });
+}
+
 // --- Initialization ---
 document.addEventListener('DOMContentLoaded', async () => {
   renderPresets();
   setupEventListeners();
+  setupPartnerClickTracking();
   
   const loadedFromUrl = loadStateFromURL();
   if (!loadedFromUrl) {
