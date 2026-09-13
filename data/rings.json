@@ -465,6 +465,58 @@
       "krUrl": "https://www.piaget.com/kr-ko/jewelry/possession/white-gold-diamond-ring-g34p1l00",
       "jpUrl": "https://www.piaget.com/jp-ja/jewelry/possession/white-gold-diamond-ring-g34p1l00",
       "imageUrl": "./images/rings/piaget-possession-decor-palace-8d.webp?v=20260911-1"
+    },
+    {
+      "id": "hermes-ariane-rg-full-dia",
+      "brand": "Hermes",
+      "brandKr": "에르메스",
+      "name": "Ariane 웨딩 밴드 (로즈골드, 풀다이아)",
+      "krPrice": 8080000,
+      "jpPrice": 881100,
+      "guestCardAllowed": false,
+      "tag": "게스트카드 5% 불가",
+      "krUrl": "https://www.hermes.com/kr/ko/product/ariane-%EC%9B%A8%EB%94%A9-%EB%B0%B4%EB%93%9C-%EC%8A%A4%EB%AA%B0-%EB%AA%A8%EB%8D%B8-H119698Bv00046/",
+      "jpUrl": "https://www.hermes.com/jp/ja/product/%E3%82%A6%E3%82%A7%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%83%AA%E3%83%B3%E3%82%B0-%E3%80%8A%E3%82%A2%E3%83%AA%E3%82%A2%E3%83%B3%E3%83%8C%E3%80%8B-pm-H119699Bv00046/",
+      "imageUrl": "./images/rings/hermes-ariane-rg-full-dia.png?v=20260913-1"
+    },
+    {
+      "id": "hermes-ever-herakles-rg-plain",
+      "brand": "Hermes",
+      "brandKr": "에르메스",
+      "name": "Ever Herakles 웨딩 밴드 (로즈골드, 노다이아)",
+      "krPrice": 2440000,
+      "jpPrice": 266200,
+      "guestCardAllowed": false,
+      "tag": "게스트카드 5% 불가",
+      "krUrl": "https://www.hermes.com/kr/ko/product/ever-herakles-%EC%9B%A8%EB%94%A9-%EB%B0%B4%EB%93%9C-H119851Bv00046/",
+      "jpUrl": "https://www.hermes.com/jp/ja/product/%E3%82%A6%E3%82%A7%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%83%AA%E3%83%B3%E3%82%B0-%E3%80%8A%E3%82%A8%E3%83%B4%E3%82%A1%E3%83%BC%E3%83%BB%E3%83%98%E3%83%A9%E3%82%AF%E3%83%AC%E3%82%B9%E3%80%8B-H119851Bv00046/",
+      "imageUrl": "./images/rings/hermes-ever-herakles-rg-plain.png?v=20260913-1"
+    },
+    {
+      "id": "hermes-ever-herakles-rg-11d",
+      "brand": "Hermes",
+      "brandKr": "에르메스",
+      "name": "Ever Herakles 웨딩 밴드 (로즈골드, 11다이아)",
+      "krPrice": 3120000,
+      "jpPrice": 339900,
+      "guestCardAllowed": false,
+      "tag": "게스트카드 5% 불가",
+      "krUrl": "https://www.hermes.com/kr/ko/product/ever-herakles-%EC%9B%A8%EB%94%A9-%EB%B0%B4%EB%93%9C-H119850Bv00046/",
+      "jpUrl": "https://www.hermes.com/jp/ja/product/%E3%82%A6%E3%82%A7%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%83%AA%E3%83%B3%E3%82%B0-%E3%80%8A%E3%82%A8%E3%83%B4%E3%82%A1%E3%83%BC%E3%83%BB%E3%83%98%E3%83%A9%E3%82%AF%E3%83%AC%E3%82%B9%E3%80%8B-H119850Bv00046/",
+      "imageUrl": "./images/rings/hermes-ever-herakles-rg-11d.png?v=20260913-1"
+    },
+    {
+      "id": "hermes-ariane-wg-plain",
+      "brand": "Hermes",
+      "brandKr": "에르메스",
+      "name": "Ariane 웨딩 밴드 (화이트골드, 노다이아)",
+      "krPrice": 2290000,
+      "jpPrice": 250800,
+      "guestCardAllowed": false,
+      "tag": "게스트카드 5% 불가",
+      "krUrl": "https://www.hermes.com/kr/ko/product/ariane-%EC%9B%A8%EB%94%A9-%EB%B0%B4%EB%93%9C-H119834Bv00048/",
+      "jpUrl": "https://www.hermes.com/jp/ja/product/%E3%82%A6%E3%82%A7%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0-%E3%80%8A%E3%82%A2%E3%83%AA%E3%82%A2%E3%83%B3%E3%83%8C%E3%80%8B-H119834Bv00046/",
+      "imageUrl": "./images/rings/hermes-ariane-wg-plain.png?v=20260913-1"
     }
   ]
 }
