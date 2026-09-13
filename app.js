@@ -698,7 +698,7 @@ function renderCrawlLogModal(logData, filterQuery = '') {
   if (!logData) return;
 
   if (dom.logTimestamp) dom.logTimestamp.textContent = `마지막 자동 검증: ${logData.timestamp || '2026-09-05'}`;
-  if (dom.logTotalCount) dom.logTotalCount.textContent = `${logData.totalRings || PRESETS.length}개 모델`;
+  if (dom.logTotalCount) dom.logTotalCount.textContent = `${PRESETS.length}개 모델`;
   if (dom.logStatusBadge) dom.logStatusBadge.textContent = '🟢 정상 완료 (COMPLETED)';
   if (dom.logUpdatedCount) dom.logUpdatedCount.textContent = `${logData.updatedCount || 0}건 (정가 유지)`;
 
