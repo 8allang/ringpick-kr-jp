@@ -1,6 +1,6 @@
 /**
  * WEDDING BAND PRICE INDEX - CORE APPLICATION
- * Target 8 Luxury Brands: Cartier, Tiffany & Co., Chanel, Bvlgari, Tasaki, Boucheron, Chaumet, Piaget
+ * Target 9 Luxury Brands: Cartier, Tiffany & Co., Chanel, Bvlgari, Tasaki, Boucheron, Chaumet, Piaget, Hermes
  * Includes Live Crawl Log Viewer
  */
 
