@@ -477,7 +477,7 @@
       "tag": "게스트카드 5% 불가",
       "krUrl": "https://www.hermes.com/kr/ko/product/ariane-%EC%9B%A8%EB%94%A9-%EB%B0%B4%EB%93%9C-%EC%8A%A4%EB%AA%B0-%EB%AA%A8%EB%8D%B8-H119698Bv00046/",
       "jpUrl": "https://www.hermes.com/jp/ja/product/%E3%82%A6%E3%82%A7%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%83%AA%E3%83%B3%E3%82%B0-%E3%80%8A%E3%82%A2%E3%83%AA%E3%82%A2%E3%83%B3%E3%83%8C%E3%80%8B-pm-H119699Bv00046/",
-      "imageUrl": "./images/rings/hermes-ariane-rg-full-dia.png?v=20260913-1"
+      "imageUrl": "./images/rings/hermes-ariane-rg-full-dia.png?v=20260913-2"
     },
     {
       "id": "hermes-ever-herakles-rg-plain",
@@ -490,7 +490,7 @@
       "tag": "게스트카드 5% 불가",
       "krUrl": "https://www.hermes.com/kr/ko/product/ever-herakles-%EC%9B%A8%EB%94%A9-%EB%B0%B4%EB%93%9C-H119851Bv00046/",
       "jpUrl": "https://www.hermes.com/jp/ja/product/%E3%82%A6%E3%82%A7%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%83%AA%E3%83%B3%E3%82%B0-%E3%80%8A%E3%82%A8%E3%83%B4%E3%82%A1%E3%83%BC%E3%83%BB%E3%83%98%E3%83%A9%E3%82%AF%E3%83%AC%E3%82%B9%E3%80%8B-H119851Bv00046/",
-      "imageUrl": "./images/rings/hermes-ever-herakles-rg-plain.png?v=20260913-1"
+      "imageUrl": "./images/rings/hermes-ever-herakles-rg-plain.png?v=20260913-2"
     },
     {
       "id": "hermes-ever-herakles-rg-11d",
@@ -503,7 +503,7 @@
       "tag": "게스트카드 5% 불가",
       "krUrl": "https://www.hermes.com/kr/ko/product/ever-herakles-%EC%9B%A8%EB%94%A9-%EB%B0%B4%EB%93%9C-H119850Bv00046/",
       "jpUrl": "https://www.hermes.com/jp/ja/product/%E3%82%A6%E3%82%A7%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%83%AA%E3%83%B3%E3%82%B0-%E3%80%8A%E3%82%A8%E3%83%B4%E3%82%A1%E3%83%BC%E3%83%BB%E3%83%98%E3%83%A9%E3%82%AF%E3%83%AC%E3%82%B9%E3%80%8B-H119850Bv00046/",
-      "imageUrl": "./images/rings/hermes-ever-herakles-rg-11d.png?v=20260913-1"
+      "imageUrl": "./images/rings/hermes-ever-herakles-rg-11d.png?v=20260913-2"
     },
     {
       "id": "hermes-ariane-wg-plain",
@@ -516,7 +516,7 @@
       "tag": "게스트카드 5% 불가",
       "krUrl": "https://www.hermes.com/kr/ko/product/ariane-%EC%9B%A8%EB%94%A9-%EB%B0%B4%EB%93%9C-H119834Bv00048/",
       "jpUrl": "https://www.hermes.com/jp/ja/product/%E3%82%A6%E3%82%A7%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0-%E3%80%8A%E3%82%A2%E3%83%AA%E3%82%A2%E3%83%B3%E3%83%8C%E3%80%8B-H119834Bv00046/",
-      "imageUrl": "./images/rings/hermes-ariane-wg-plain.png?v=20260913-1"
+      "imageUrl": "./images/rings/hermes-ariane-wg-plain.png?v=20260913-2"
     },
     {
       "id": "chaumet-bee-rg-plain-2-5mm",
@@ -528,7 +528,8 @@
       "guestCardAllowed": false,
       "tag": "게스트카드 5% 불가",
       "krUrl": "https://www.chaumet.com/kr_kr/bee-de-chaumet-ring-081931",
-      "jpUrl": "https://www.chaumet.com/jp_ja/bee-de-chaumet-ring-081931"
+      "jpUrl": "https://www.chaumet.com/jp_ja/bee-de-chaumet-ring-081931",
+      "imageUrl": "./images/rings/chaumet-bee-rg-plain-2-5mm.png?v=20260913-1"
     },
     {
       "id": "chaumet-bee-rg-dia-2-5mm",
@@ -540,7 +541,8 @@
       "guestCardAllowed": true,
       "tag": "지점별 5% 가능",
       "krUrl": "https://www.chaumet.com/kr_kr/bee-de-chaumet-ring-081933",
-      "jpUrl": "https://www.chaumet.com/jp_ja/bee-de-chaumet-ring-081933"
+      "jpUrl": "https://www.chaumet.com/jp_ja/bee-de-chaumet-ring-081933",
+      "imageUrl": "./images/rings/chaumet-bee-rg-dia-2-5mm.png?v=20260913-1"
     }
   ]
 }
