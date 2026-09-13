@@ -4,7 +4,7 @@
  * Includes Live Crawl Log Viewer
  */
 
-// --- Default 8 Luxury Brands Presets ---
+// --- Default Luxury Brand Presets ---
 let PRESETS = [
   {
     "id": "cartier-love-sm",
@@ -599,11 +599,12 @@ async function loadExternalRingsData() {
     const data = await res.json();
     if (data && data.rings && Array.isArray(data.rings)) {
       PRESETS = data.rings;
+      syncBrandFilters(data.targetBrands);
       renderPresets();
       
       const hint = document.querySelector('.preset-hint');
       if (hint && data.lastUpdated) {
-        hint.textContent = `* 8대 브랜드 공식몰 기준 데이터 (최종 검증: ${data.lastUpdated})`;
+        hint.textContent = `* 9대 브랜드 공식몰 기준 데이터 (최종 검증: ${data.lastUpdated})`;
       }
       if (dom.quickSummaryModal && dom.quickSummaryModal.classList.contains('active')) {
         renderQuickSummary();
@@ -611,6 +612,50 @@ async function loadExternalRingsData() {
     }
   } catch (err) {
     console.log('Using default presets data:', err);
+  }
+}
+
+function syncBrandFilters(targetBrands = []) {
+  const labels = {
+    'Cartier': '까르띠에', 'Tiffany & Co.': '티파니', 'Chanel': '샤넬',
+    'Bvlgari': '불가리', 'Tasaki': '타사키', 'Boucheron': '부쉐론',
+    'Chaumet': '쇼메', 'Piaget': '피아제', 'Hermes': '에르메스'
+  };
+  const brands = targetBrands.length ? targetBrands : [...new Set(PRESETS.map(p => p.brand))];
+  const counts = PRESETS.reduce((acc, p) => {
+    acc[p.brand] = (acc[p.brand] || 0) + 1;
+    return acc;
+  }, {});
+
+  if (dom.brandFilterBar) {
+    dom.brandFilterBar.innerHTML = [
+      `<button type="button" class="brand-tab active" data-brand="all">전체 (${PRESETS.length})</button>`,
+      ...brands.map(brand => `<button type="button" class="brand-tab" data-brand="${brand}">${labels[brand] || brand} (${counts[brand] || 0})</button>`)
+    ].join('');
+    dom.brandFilterBar.querySelectorAll('.brand-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        dom.brandFilterBar.querySelectorAll('.brand-tab').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        state.activeBrandFilter = tab.dataset.brand;
+        state.visiblePresetLimit = 12;
+        renderPresets();
+      });
+    });
+  }
+
+  if (dom.quickBrandPills) {
+    dom.quickBrandPills.innerHTML = [
+      `<button type="button" class="quick-pill active" data-brand="all">전체 (${PRESETS.length})</button>`,
+      ...brands.map(brand => `<button type="button" class="quick-pill" data-brand="${brand}">${labels[brand] || brand}</button>`)
+    ].join('');
+    dom.quickBrandPills.querySelectorAll('.quick-pill').forEach(pill => {
+      pill.addEventListener('click', () => {
+        dom.quickBrandPills.querySelectorAll('.quick-pill').forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        quickState.brandFilter = pill.dataset.brand;
+        renderQuickSummary();
+      });
+    });
   }
 }
 
@@ -1744,7 +1789,7 @@ function setupEventListeners() {
       dom.tabCrawlerLogBtn.classList.remove('active');
       if (dom.quickDirectoryPanel) dom.quickDirectoryPanel.style.display = 'flex';
       if (dom.quickCrawlerLogPanel) dom.quickCrawlerLogPanel.style.display = 'none';
-      if (dom.quickModalMainTitle) dom.quickModalMainTitle.textContent = '📋 8대 럭셔리 웨딩밴드 모델 & 공식몰 URL';
+      if (dom.quickModalMainTitle) dom.quickModalMainTitle.textContent = '📋 9대 럭셔리 웨딩밴드 모델 & 공식몰 URL';
       if (dom.quickModalSubTitle) dom.quickModalSubTitle.textContent = '각 브랜드별 모델명과 한·일 공식 홈페이지 링크를 빠르게 확인할 수 있습니다.';
     });
 
@@ -1754,7 +1799,7 @@ function setupEventListeners() {
       if (dom.quickCrawlerLogPanel) dom.quickCrawlerLogPanel.style.display = 'flex';
       if (dom.quickDirectoryPanel) dom.quickDirectoryPanel.style.display = 'none';
       if (dom.quickModalMainTitle) dom.quickModalMainTitle.textContent = '📡 공식몰 크롤링 & 데이터 검증 로그';
-      if (dom.quickModalSubTitle) dom.quickModalSubTitle.textContent = '8대 브랜드 공식몰 실시간 상태 및 소프트 404 감지 검증 내역입니다.';
+      if (dom.quickModalSubTitle) dom.quickModalSubTitle.textContent = '9대 브랜드 공식몰 실시간 상태 및 소프트 404 감지 검증 내역입니다.';
       if (crawlLogData) {
         renderCrawlLogModal(crawlLogData, dom.logSearchInput ? dom.logSearchInput.value : '');
       } else {
