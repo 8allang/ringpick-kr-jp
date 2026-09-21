@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-14 09:01:06 KST",
+  "timestamp": "2026-09-21 09:00:51 KST",
   "status": "COMPLETED",
   "totalRings": 41,
   "updatedCount": 0,
@@ -588,10 +588,10 @@
       "imageUrl": "./images/rings/hermes-ever-herakles-rg-plain.png?v=20260913-2",
       "krPrice": 2440000,
       "jpPrice": 266200,
-      "krStatus": "🟢 공식몰 정가 일치 확인",
-      "jpStatus": "🟢 공식몰 보안 보호 (URL 정상)",
-      "krCode": 200,
-      "jpCode": 403,
+      "krStatus": "🟢 공식몰 보안 보호 (URL 정상)",
+      "jpStatus": "🟢 공식몰 정가 일치 확인",
+      "krCode": 403,
+      "jpCode": 200,
       "krUrl": "https://www.hermes.com/kr/ko/product/ever-herakles-%EC%9B%A8%EB%94%A9-%EB%B0%B4%EB%93%9C-H119851Bv00046/",
       "jpUrl": "https://www.hermes.com/jp/ja/product/%E3%82%A6%E3%82%A7%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E3%83%AA%E3%83%B3%E3%82%B0-%E3%80%8A%E3%82%A8%E3%83%B4%E3%82%A1%E3%83%BC%E3%83%BB%E3%83%98%E3%83%A9%E3%82%AF%E3%83%AC%E3%82%B9%E3%80%8B-H119851Bv00046/",
       "isSoft404": false
