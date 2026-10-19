@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-10-12 09:02:02 KST",
+  "timestamp": "2026-10-19 10:54:49 KST",
   "status": "COMPLETED",
   "totalRings": 41,
-  "updatedCount": 3,
+  "updatedCount": 0,
   "logs": [
     {
       "id": "cartier-love-sm",
@@ -317,7 +317,7 @@
       "krPrice": 2130000,
       "jpPrice": 248600,
       "krStatus": "🟢 공식몰 정가 일치 확인",
-      "jpStatus": "✨ 신규 가격 반영 (225,500 -> 248,600)",
+      "jpStatus": "🟢 공식몰 정가 일치 확인",
       "krCode": 200,
       "jpCode": 200,
       "krUrl": "https://www.tasaki.co.kr/trapezio-ring-rk-4716-18ksg.html",
@@ -333,7 +333,7 @@
       "krPrice": 2330000,
       "jpPrice": 271700,
       "krStatus": "🟢 공식몰 정가 일치 확인",
-      "jpStatus": "✨ 신규 가격 반영 (246,400 -> 271,700)",
+      "jpStatus": "🟢 공식몰 정가 일치 확인",
       "krCode": 200,
       "jpCode": 200,
       "krUrl": "https://www.tasaki.co.kr/trapezio-ring-rd-f2704-18ksg.html",
@@ -349,7 +349,7 @@
       "krPrice": 2030000,
       "jpPrice": 236500,
       "krStatus": "🟢 공식몰 정가 일치 확인",
-      "jpStatus": "✨ 신규 가격 반영 (214,500 -> 236,500)",
+      "jpStatus": "🟢 공식몰 정가 일치 확인",
       "krCode": 200,
       "jpCode": 200,
       "krUrl": "https://www.tasaki.co.kr/piano-3-stones-20-ring-rd-f2696-18ksg.html",
